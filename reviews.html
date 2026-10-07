@@ -1,0 +1,3894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Read real traveller reviews and experiences with Wanderly Travels. See what our customers say about their journeys, packages and travel experiences.">
+
+  <meta name="keywords"
+    content="Wanderly Travels reviews, travel reviews, customer experiences, travel agency reviews, holiday reviews, India travel">
+
+  <meta name="author" content="Wanderly Travels">
+
+  <title>Traveller Reviews | Wanderly Travels</title>
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+  <!-- =====================================================
+         COMBINED CSS
+    ====================================================== -->
+  <style>
+    /* =====================================================
+           ROOT VARIABLES
+        ====================================================== */
+
+    :root {
+      --primary: #18aa9d;
+      --primary-dark: #108d82;
+      --primary-light: #dff6f3;
+
+      --navy: #102536;
+      --navy-dark: #071624;
+      --navy-soft: #193547;
+
+      --white: #ffffff;
+      --off-white: #f8fbfa;
+      --cream: #f5f8f7;
+
+      --text: #24343d;
+      --text-light: #64747c;
+      --muted: #87959b;
+
+      --border: #e5eceb;
+
+      --gold: #dcae58;
+      --gold-light: #f8edda;
+
+      --danger: #d95c5c;
+
+      --shadow-sm:
+        0 8px 25px rgba(7, 22, 36, 0.06);
+
+      --shadow-md:
+        0 18px 45px rgba(7, 22, 36, 0.10);
+
+      --shadow-lg:
+        0 30px 70px rgba(7, 22, 36, 0.16);
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+
+      --transition: 0.35s ease;
+
+      --font-body: "DM Sans", sans-serif;
+      --font-display: "Playfair Display", Georgia, serif;
+    }
+
+
+    /* =====================================================
+           RESET
+        ====================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+
+    /* =====================================================
+           ACCESSIBILITY
+        ====================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+
+      padding: 12px 18px;
+
+      background: var(--primary);
+      color: var(--white);
+
+      border-radius: 8px;
+
+      font-weight: 700;
+
+      transition: top 0.3s ease;
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+
+    /* =====================================================
+           CONTAINER
+        ====================================================== */
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (max-width: 1100px) {
+      .container {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+    }
+
+
+    /* =====================================================
+           PRELOADER
+        ====================================================== */
+
+    .preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy-dark);
+
+      transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+    }
+
+    .preloader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      width: 55px;
+      height: 55px;
+
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-top-color: var(--primary);
+
+      border-radius: 50%;
+
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    /* =====================================================
+           HEADER
+        ====================================================== */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.96);
+
+      border-bottom: 1px solid transparent;
+
+      transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+
+      border-color: var(--border);
+
+      box-shadow:
+        0 8px 30px rgba(7, 22, 36, 0.08);
+    }
+
+    .nav {
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    /* =====================================================
+           LOGO
+        ====================================================== */
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 11px;
+
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(135deg,
+          var(--primary),
+          var(--primary-dark));
+
+      color: var(--white);
+
+      box-shadow:
+        0 8px 20px rgba(24, 170, 157, 0.25);
+    }
+
+    .logo-icon i {
+      font-size: 17px;
+    }
+
+    .logo-text {
+      color: var(--navy);
+
+      font-size: 21px;
+      font-weight: 700;
+
+      letter-spacing: -0.4px;
+    }
+
+    .logo-text span {
+      color: var(--primary);
+    }
+
+
+    /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+
+      gap: 27px;
+
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+
+      color: var(--text);
+
+      font-size: 14px;
+      font-weight: 600;
+
+      padding: 8px 0;
+
+      transition: color var(--transition);
+    }
+
+    .nav-link::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 1px;
+
+      width: 0;
+      height: 2px;
+
+      border-radius: 5px;
+
+      background: var(--primary);
+
+      transition: width var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary-dark);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+
+    /* =====================================================
+           NAV CTA
+        ====================================================== */
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 12px 18px;
+
+      background: var(--navy);
+      color: var(--white);
+
+      border-radius: 10px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+           MOBILE MENU BUTTON
+        ====================================================== */
+
+    .menu-toggle {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      border-radius: 10px;
+
+      background: var(--cream);
+      color: var(--navy);
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 19px;
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .reviews-hero {
+      position: relative;
+
+      min-height: 570px;
+
+      padding-top: 150px;
+      padding-bottom: 90px;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(110deg,
+          rgba(7, 22, 36, 0.96) 0%,
+          rgba(7, 22, 36, 0.84) 45%,
+          rgba(7, 22, 36, 0.52) 100%),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
+    }
+
+    .hero-decoration {
+      position: absolute;
+
+      width: 360px;
+      height: 360px;
+
+      right: -130px;
+      bottom: -180px;
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      border-radius: 50%;
+    }
+
+    .hero-decoration::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 45px;
+
+      border: 1px solid rgba(255, 255, 255, 0.10);
+
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 18px;
+
+      color: #9ce8df;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 30px;
+      height: 2px;
+
+      background: var(--primary);
+
+      border-radius: 5px;
+    }
+
+    .hero-title {
+      color: var(--white);
+
+      font-family: var(--font-display);
+
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-title span {
+      color: #75d8ce;
+    }
+
+    .hero-description {
+      max-width: 680px;
+
+      color: rgba(255, 255, 255, 0.78);
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+      margin-bottom: 28px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      transition: color var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb i {
+      font-size: 9px;
+    }
+
+
+    /* =====================================================
+           SECTION COMMON
+        ====================================================== */
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-soft {
+      background: var(--off-white);
+    }
+
+    .section-heading {
+      max-width: 730px;
+
+      margin-bottom: 50px;
+    }
+
+    .section-heading.center {
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--primary-dark);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+    }
+
+    .section-label::before {
+      content: "";
+
+      width: 25px;
+      height: 2px;
+
+      background: var(--primary);
+
+      border-radius: 5px;
+    }
+
+    .section-heading.center .section-label::before {
+      display: none;
+    }
+
+    .section-title {
+      color: var(--navy);
+
+      font-family: var(--font-display);
+
+      font-size: clamp(34px, 4vw, 50px);
+
+      line-height: 1.15;
+
+      letter-spacing: -0.8px;
+
+      margin-bottom: 16px;
+    }
+
+    .section-text {
+      color: var(--text-light);
+
+      font-size: 16px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+           REVIEW STATS
+        ====================================================== */
+
+    .review-summary {
+      display: grid;
+
+      grid-template-columns: 1fr 1.4fr;
+
+      gap: 35px;
+
+      align-items: stretch;
+
+      margin-top: -65px;
+
+      position: relative;
+
+      z-index: 5;
+    }
+
+    .rating-overview {
+      padding: 38px;
+
+      background: var(--white);
+
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow-lg);
+
+      border: 1px solid rgba(229, 236, 235, 0.9);
+
+      text-align: center;
+    }
+
+    .rating-number {
+      color: var(--navy);
+
+      font-family: var(--font-display);
+
+      font-size: 68px;
+
+      font-weight: 600;
+
+      line-height: 1;
+    }
+
+    .stars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 5px;
+
+      margin: 13px 0;
+    }
+
+    .stars i {
+      color: var(--gold);
+
+      font-size: 18px;
+    }
+
+    .rating-caption {
+      color: var(--text-light);
+
+      font-size: 14px;
+    }
+
+    .rating-bars {
+      padding: 38px;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      background: var(--navy);
+
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .rating-bar-row {
+      display: grid;
+
+      grid-template-columns: 38px 1fr 45px;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin: 7px 0;
+
+      color: rgba(255, 255, 255, 0.75);
+
+      font-size: 13px;
+    }
+
+    .bar {
+      height: 7px;
+
+      background: rgba(255, 255, 255, 0.12);
+
+      border-radius: 10px;
+
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+
+      height: 100%;
+
+      background: var(--primary);
+
+      border-radius: inherit;
+    }
+
+    .bar-5 {
+      width: 91%;
+    }
+
+    .bar-4 {
+      width: 7%;
+    }
+
+    .bar-3 {
+      width: 2%;
+    }
+
+    .bar-2,
+    .bar-1 {
+      width: 0;
+    }
+
+
+    /* =====================================================
+           FILTER
+        ====================================================== */
+
+    .review-toolbar {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+
+      margin-bottom: 35px;
+    }
+
+    .review-count {
+      color: var(--text-light);
+
+      font-size: 14px;
+    }
+
+    .review-count strong {
+      color: var(--navy);
+    }
+
+    .filter-buttons {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 15px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 30px;
+
+      background: var(--white);
+
+      color: var(--text-light);
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+    }
+
+    .filter-btn:hover {
+      transform: translateY(-2px);
+
+      border-color: var(--primary);
+
+      color: var(--primary-dark);
+    }
+
+    .filter-btn.active {
+      background: var(--primary);
+
+      border-color: var(--primary);
+
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+           REVIEW GRID
+        ====================================================== */
+
+    .reviews-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 24px;
+    }
+
+    .review-card {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 330px;
+
+      padding: 28px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius-md);
+
+      box-shadow: var(--shadow-sm);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+
+      overflow: hidden;
+    }
+
+    .review-card::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 3px;
+
+      background:
+        linear-gradient(90deg,
+          var(--primary),
+          var(--gold));
+
+      transform: scaleX(0);
+
+      transform-origin: left;
+
+      transition: transform 0.45s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-7px);
+
+      box-shadow: var(--shadow-md);
+
+      border-color: #d8e7e5;
+    }
+
+    .review-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .review-top {
+      display: flex;
+
+      align-items: flex-start;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      margin-bottom: 20px;
+    }
+
+    .reviewer {
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+    }
+
+    .reviewer-avatar {
+      width: 48px;
+      height: 48px;
+
+      flex: 0 0 48px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(135deg,
+          var(--primary-light),
+          #edf7f5);
+
+      color: var(--primary-dark);
+
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .reviewer-name {
+      color: var(--navy);
+
+      font-size: 15px;
+      font-weight: 800;
+
+      line-height: 1.3;
+    }
+
+    .reviewer-location {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-top: 2px;
+    }
+
+    .review-date {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      white-space: nowrap;
+    }
+
+    .review-stars {
+      display: flex;
+
+      gap: 4px;
+
+      margin-bottom: 14px;
+    }
+
+    .review-stars i {
+      color: var(--gold);
+
+      font-size: 13px;
+    }
+
+    .review-title {
+      color: var(--navy);
+
+      font-size: 17px;
+      font-weight: 700;
+
+      margin-bottom: 9px;
+    }
+
+    .review-text {
+      color: var(--text-light);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
+      flex: 1;
+    }
+
+    .review-trip {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 7px;
+
+      width: fit-content;
+
+      margin-top: 20px;
+
+      padding: 7px 11px;
+
+      background: var(--cream);
+
+      border-radius: 8px;
+
+      color: var(--primary-dark);
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .review-trip i {
+      font-size: 10px;
+    }
+
+
+    /* =====================================================
+           EMPTY FILTER STATE
+        ====================================================== */
+
+    .no-results {
+      display: none;
+
+      grid-column: 1 / -1;
+
+      padding: 60px 25px;
+
+      text-align: center;
+
+      background: var(--white);
+
+      border: 1px dashed var(--border);
+
+      border-radius: var(--radius-md);
+    }
+
+    .no-results i {
+      color: var(--primary);
+
+      font-size: 35px;
+
+      margin-bottom: 14px;
+    }
+
+    .no-results h3 {
+      color: var(--navy);
+
+      margin-bottom: 7px;
+    }
+
+    .no-results p {
+      color: var(--text-light);
+
+      font-size: 14px;
+    }
+
+
+    /* =====================================================
+           TRUST SECTION
+        ====================================================== */
+
+    .trust-section {
+      padding: 95px 0;
+
+      background:
+        linear-gradient(135deg,
+          var(--navy-dark),
+          var(--navy));
+
+      color: var(--white);
+
+      overflow: hidden;
+    }
+
+    .trust-grid {
+      display: grid;
+
+      grid-template-columns: 1.05fr 1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .trust-image {
+      position: relative;
+    }
+
+    .trust-image img {
+      height: 470px;
+
+      object-fit: cover;
+
+      border-radius: var(--radius-lg);
+
+      box-shadow: var(--shadow-lg);
+    }
+
+    .trust-image-badge {
+      position: absolute;
+
+      right: -25px;
+      bottom: 28px;
+
+      padding: 20px 22px;
+
+      background: var(--white);
+
+      color: var(--navy);
+
+      border-radius: 15px;
+
+      box-shadow: var(--shadow-lg);
+    }
+
+    .trust-image-badge strong {
+      display: block;
+
+      color: var(--primary-dark);
+
+      font-size: 22px;
+    }
+
+    .trust-image-badge span {
+      color: var(--text-light);
+
+      font-size: 11px;
+    }
+
+    .trust-content .section-label {
+      color: #83ddd3;
+    }
+
+    .trust-content .section-title {
+      color: var(--white);
+    }
+
+    .trust-content .section-text {
+      color: rgba(255, 255, 255, 0.68);
+
+      margin-bottom: 28px;
+    }
+
+    .trust-points {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 17px;
+    }
+
+    .trust-point {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 11px;
+    }
+
+    .trust-point-icon {
+      width: 35px;
+      height: 35px;
+
+      flex: 0 0 35px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 9px;
+
+      background: rgba(24, 170, 157, 0.14);
+
+      color: #76dcd2;
+
+      font-size: 13px;
+    }
+
+    .trust-point h4 {
+      color: var(--white);
+
+      font-size: 14px;
+
+      margin-bottom: 2px;
+    }
+
+    .trust-point p {
+      color: rgba(255, 255, 255, 0.52);
+
+      font-size: 12px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =====================================================
+           WRITE REVIEW CTA
+        ====================================================== */
+
+    .write-review {
+      padding: 100px 0;
+
+      background: var(--off-white);
+    }
+
+    .review-cta {
+      position: relative;
+
+      padding: 65px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(135deg,
+          #edf9f7,
+          #f8fbfa);
+
+      border: 1px solid #dcece9;
+
+      border-radius: var(--radius-lg);
+
+      text-align: center;
+    }
+
+    .review-cta::before,
+    .review-cta::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(24, 170, 157, 0.15);
+    }
+
+    .review-cta::before {
+      width: 260px;
+      height: 260px;
+
+      left: -130px;
+      top: -150px;
+    }
+
+    .review-cta::after {
+      width: 200px;
+      height: 200px;
+
+      right: -90px;
+      bottom: -110px;
+    }
+
+    .review-cta-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 650px;
+
+      margin: auto;
+    }
+
+    .review-cta-icon {
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+      place-items: center;
+
+      margin: 0 auto 18px;
+
+      border-radius: 16px;
+
+      background: var(--white);
+
+      color: var(--primary-dark);
+
+      box-shadow: var(--shadow-sm);
+
+      font-size: 21px;
+    }
+
+    .review-cta h2 {
+      color: var(--navy);
+
+      font-family: var(--font-display);
+
+      font-size: clamp(32px, 4vw, 45px);
+
+      line-height: 1.15;
+
+      margin-bottom: 14px;
+    }
+
+    .review-cta p {
+      color: var(--text-light);
+
+      font-size: 15px;
+
+      margin-bottom: 25px;
+    }
+
+    .primary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 9px;
+
+      padding: 14px 22px;
+
+      background: var(--primary);
+
+      color: var(--white);
+
+      border-radius: 10px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .primary-button:hover {
+      background: var(--primary-dark);
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 12px 25px rgba(24, 170, 157, 0.22);
+    }
+
+
+    /* =====================================================
+           FOOTER
+        ====================================================== */
+
+    .footer {
+      padding: 70px 0 25px;
+
+      background: var(--navy-dark);
+
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr 1fr 1.15fr;
+
+      gap: 45px;
+
+      padding-bottom: 50px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .footer-brand p {
+      max-width: 310px;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+
+      line-height: 1.8;
+
+      margin: 17px 0 20px;
+    }
+
+    .footer .logo-text {
+      color: var(--white);
+    }
+
+    .social-links {
+      display: flex;
+
+      gap: 8px;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 9px;
+
+      background: rgba(255, 255, 255, 0.07);
+
+      color: rgba(255, 255, 255, 0.72);
+
+      font-size: 13px;
+
+      transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+
+      color: var(--white);
+
+      transform: translateY(-3px);
+    }
+
+    .footer-title {
+      color: var(--white);
+
+      font-size: 14px;
+
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+
+      gap: 9px;
+
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.57);
+
+      font-size: 13px;
+
+      transition:
+        color var(--transition),
+        padding-left var(--transition);
+    }
+
+    .footer-links a:hover,
+    .footer-links a.active {
+      color: var(--primary);
+
+      padding-left: 4px;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+    }
+
+    .contact-item i {
+      width: 18px;
+
+      color: var(--primary);
+
+      margin-top: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: rgba(255, 255, 255, 0.42);
+
+      font-size: 12px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+
+      gap: 18px;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+    .back-top {
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      background: var(--primary);
+
+      color: var(--white);
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 12px 30px rgba(24, 170, 157, 0.25);
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(15px);
+
+      transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition);
+
+      z-index: 900;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+
+      transform: translateY(0);
+    }
+
+    .back-top:hover {
+      background: var(--primary-dark);
+    }
+
+
+    /* =====================================================
+           REVEAL ANIMATION
+        ====================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(25px);
+
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+           HIDDEN FILTER
+        ====================================================== */
+
+    .review-card.hidden {
+      display: none;
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 1100px
+        ====================================================== */
+
+    @media (max-width: 1100px) {
+
+      .nav-menu {
+        gap: 19px;
+      }
+
+      .nav-cta {
+        padding: 11px 14px;
+      }
+
+      .reviews-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .trust-grid {
+        gap: 45px;
+      }
+
+      .footer-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 900px
+        ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .nav {
+        min-height: 74px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+
+        top: 74px;
+        left: 20px;
+        right: 20px;
+
+        padding: 22px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        background: var(--white);
+
+        border: 1px solid var(--border);
+
+        border-radius: 16px;
+
+        box-shadow: var(--shadow-lg);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-12px);
+
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .nav-menu.open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+      .nav-menu li {
+        width: 100%;
+      }
+
+      .nav-link {
+        display: block;
+
+        padding: 12px 10px;
+      }
+
+      .nav-cta {
+        width: 100%;
+
+        margin-top: 7px;
+      }
+
+      .reviews-hero {
+        min-height: 530px;
+
+        padding-top: 130px;
+      }
+
+      .review-summary {
+        grid-template-columns: 1fr;
+
+        margin-top: -40px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-image {
+        max-width: 700px;
+      }
+
+      .trust-image-badge {
+        right: 20px;
+      }
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 700px
+        ====================================================== */
+
+    @media (max-width: 700px) {
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .reviews-hero {
+        min-height: 500px;
+
+        padding-top: 120px;
+        padding-bottom: 70px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .review-summary {
+        margin-top: -30px;
+      }
+
+      .rating-overview,
+      .rating-bars {
+        padding: 28px;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .review-toolbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .filter-buttons {
+        width: 100%;
+      }
+
+      .trust-section {
+        padding: 75px 0;
+      }
+
+      .trust-points {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-image img {
+        height: 390px;
+      }
+
+      .review-cta {
+        padding: 45px 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 500px
+        ====================================================== */
+
+    @media (max-width: 500px) {
+
+      .logo-text {
+        font-size: 18px;
+      }
+
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .reviews-hero {
+        min-height: 530px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+
+        letter-spacing: -0.8px;
+      }
+
+      .breadcrumb {
+        font-size: 12px;
+      }
+
+      .rating-number {
+        font-size: 58px;
+      }
+
+      .rating-bar-row {
+        grid-template-columns:
+          31px 1fr 38px;
+
+        gap: 8px;
+      }
+
+      .review-card {
+        padding: 23px;
+      }
+
+      .review-top {
+        gap: 8px;
+      }
+
+      .review-date {
+        font-size: 10px;
+      }
+
+      .trust-image img {
+        height: 330px;
+      }
+
+      .trust-image-badge {
+        right: 10px;
+        bottom: 15px;
+
+        padding: 14px 16px;
+      }
+
+      .back-top {
+        right: 17px;
+        bottom: 17px;
+
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+
+    /* =====================================================
+           REDUCED MOTION
+        ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="loader"></div>
+  </div>
+
+
+  <!-- =====================================================
+         SKIP LINK
+    ====================================================== -->
+
+  <a href="#main-content" class="skip-link">
+    Skip to content
+  </a>
+
+
+  <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+  <header class="header" id="header">
+
+    <div class="container">
+
+      <nav class="nav" aria-label="Main navigation">
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo" aria-label="Wanderly Travels Home">
+
+          <span class="logo-icon">
+            <i class="fa-solid fa-location-arrow"></i>
+          </span>
+
+          <span class="logo-text">
+            Wanderly<span>Travels</span>
+          </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-menu" id="navMenu">
+
+          <li>
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="packages.html" class="nav-link">
+              Packages
+            </a>
+          </li>
+
+          <li>
+            <a href="destinations.html" class="nav-link">
+              Destinations
+            </a>
+          </li>
+
+          <li>
+            <a href="offers.html" class="nav-link">
+              Offers
+            </a>
+          </li>
+
+          <li>
+            <a href="our-story.html" class="nav-link">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="nav-link">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="custom-trip.html" class="nav-cta">
+              Plan My Trip
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+
+        </ul>
+
+
+        <!-- MOBILE MENU -->
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="navMenu">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="reviews-hero">
+
+      <div class="hero-decoration"></div>
+
+      <div class="container">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            Traveller Stories
+          </div>
+
+          <h1 class="hero-title">
+            Journeys they loved.
+            <span>Stories they shared.</span>
+          </h1>
+
+          <p class="hero-description">
+            Every journey leaves a memory. Discover what
+            our travellers experienced with Wanderly Travels,
+            from beautifully planned escapes to unforgettable
+            moments along the way.
+          </p>
+
+          <div class="breadcrumb">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+              Reviews
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             RATING SUMMARY
+        ================================================== -->
+
+    <section class="section-soft">
+
+      <div class="container">
+
+        <div class="review-summary reveal">
+
+          <!-- OVERALL RATING -->
+
+          <div class="rating-overview">
+
+            <div class="rating-number">
+              4.9
+            </div>
+
+            <div class="stars" aria-label="4.9 out of 5 stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <p class="rating-caption">
+              Based on 500+ traveller experiences
+            </p>
+
+          </div>
+
+
+          <!-- RATING BREAKDOWN -->
+
+          <div class="rating-bars">
+
+            <div class="rating-bar-row">
+
+              <span>5 ★</span>
+
+              <div class="bar">
+                <span class="bar-5"></span>
+              </div>
+
+              <span>91%</span>
+
+            </div>
+
+
+            <div class="rating-bar-row">
+
+              <span>4 ★</span>
+
+              <div class="bar">
+                <span class="bar-4"></span>
+              </div>
+
+              <span>7%</span>
+
+            </div>
+
+
+            <div class="rating-bar-row">
+
+              <span>3 ★</span>
+
+              <div class="bar">
+                <span class="bar-3"></span>
+              </div>
+
+              <span>2%</span>
+
+            </div>
+
+
+            <div class="rating-bar-row">
+
+              <span>2 ★</span>
+
+              <div class="bar">
+                <span class="bar-2"></span>
+              </div>
+
+              <span>0%</span>
+
+            </div>
+
+
+            <div class="rating-bar-row">
+
+              <span>1 ★</span>
+
+              <div class="bar">
+                <span class="bar-1"></span>
+              </div>
+
+              <span>0%</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             REVIEWS
+        ================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            Real Experiences
+          </div>
+
+          <h2 class="section-title">
+            Hear it from the travellers.
+          </h2>
+
+          <p class="section-text">
+            From family holidays to romantic getaways,
+            these are a few of the experiences our travellers
+            have shared with us.
+          </p>
+
+        </div>
+
+
+        <!-- TOOLBAR -->
+
+        <div class="review-toolbar reveal">
+
+          <p class="review-count">
+            Showing
+            <strong id="reviewCount">
+              9
+            </strong>
+            traveller reviews
+          </p>
+
+
+          <div class="filter-buttons" role="group" aria-label="Filter reviews">
+
+            <button class="filter-btn active" data-filter="all" type="button">
+              All Reviews
+            </button>
+
+            <button class="filter-btn" data-filter="family" type="button">
+              Family
+            </button>
+
+            <button class="filter-btn" data-filter="couple" type="button">
+              Couples
+            </button>
+
+            <button class="filter-btn" data-filter="solo" type="button">
+              Solo
+            </button>
+
+            <button class="filter-btn" data-filter="friends" type="button">
+              Friends
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- REVIEW GRID -->
+
+        <div class="reviews-grid" id="reviewsGrid">
+
+
+          <!-- REVIEW 01 -->
+
+          <article class="review-card reveal" data-category="family">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  AK
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Ananya & Family
+                  </div>
+
+                  <div class="reviewer-location">
+                    Bengaluru, Karnataka
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                May 2026
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              A wonderfully organised family trip
+            </h3>
+
+            <p class="review-text">
+              Everything felt thoughtfully planned.
+              The hotels, transfers and sightseeing were
+              smooth, and our family could simply enjoy
+              the holiday without worrying about the details.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-location-dot"></i>
+              Kerala Family Escape
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 02 -->
+
+          <article class="review-card reveal" data-category="couple">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  RS
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Rohan & Sneha
+                  </div>
+
+                  <div class="reviewer-location">
+                    Hyderabad, Telangana
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                April 2026
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              Exactly the romantic escape we wanted
+            </h3>
+
+            <p class="review-text">
+              We told Wanderly Travels what kind of
+              experience we wanted and they understood
+              it perfectly. The entire trip felt relaxed,
+              beautiful and genuinely special.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-heart"></i>
+              Maldives Getaway
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 03 -->
+
+          <article class="review-card reveal" data-category="friends">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  VM
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Varun & Friends
+                  </div>
+
+                  <div class="reviewer-location">
+                    Chennai, Tamil Nadu
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                March 2026
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              Perfect balance of adventure and chill
+            </h3>
+
+            <p class="review-text">
+              Our group wanted adventure during the day
+              and relaxed evenings. The package gave us
+              the right balance and the planning process
+              was incredibly easy.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-mountain-sun"></i>
+              Himachal Adventure
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 04 -->
+
+          <article class="review-card reveal" data-category="solo">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  NP
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Neha Prasad
+                  </div>
+
+                  <div class="reviewer-location">
+                    Pune, Maharashtra
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                February 2026
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              My first solo trip felt effortless
+            </h3>
+
+            <p class="review-text">
+              I was nervous about travelling alone,
+              but the team made the planning process
+              simple and reassuring. I came back with
+              memories I will keep for a long time.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-person-walking"></i>
+              Rajasthan Solo Journey
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 05 -->
+
+          <article class="review-card reveal" data-category="family">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  PM
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Priya Menon
+                  </div>
+
+                  <div class="reviewer-location">
+                    Kochi, Kerala
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                January 2026
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              The kids had an amazing time
+            </h3>
+
+            <p class="review-text">
+              The itinerary was comfortable for our
+              children and never felt rushed. We loved
+              how the team considered our family's
+              needs before finalising the trip.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-people-roof"></i>
+              Goa Family Holiday
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 06 -->
+
+          <article class="review-card reveal" data-category="couple">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  AS
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Arjun & Shreya
+                  </div>
+
+                  <div class="reviewer-location">
+                    Mumbai, Maharashtra
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                December 2025
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              Beautifully planned from start to finish
+            </h3>
+
+            <p class="review-text">
+              From our first enquiry to our return home,
+              everything was handled professionally.
+              We especially appreciated how quickly the
+              team responded whenever we had questions.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-plane-departure"></i>
+              Bali Couple Escape
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 07 -->
+
+          <article class="review-card reveal" data-category="friends">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  DK
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Deepak & Friends
+                  </div>
+
+                  <div class="reviewer-location">
+                    Vijayawada, Andhra Pradesh
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                November 2025
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              Great trip and zero planning stress
+            </h3>
+
+            <p class="review-text">
+              We only had a few days and wanted to make
+              the most of them. Wanderly created a practical
+              itinerary that covered everything we wanted.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-compass"></i>
+              Northeast Explorer
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 08 -->
+
+          <article class="review-card reveal" data-category="solo">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  SA
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Sandeep A.
+                  </div>
+
+                  <div class="reviewer-location">
+                    Bengaluru, Karnataka
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                October 2025
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              Simple, clear and genuinely helpful
+            </h3>
+
+            <p class="review-text">
+              I liked that there were no unnecessary
+              complications. The team listened to what
+              I wanted and suggested options instead of
+              pushing a fixed package.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-route"></i>
+              Uttarakhand Escape
+            </div>
+
+          </article>
+
+
+          <!-- REVIEW 09 -->
+
+          <article class="review-card reveal" data-category="family">
+
+            <div class="review-top">
+
+              <div class="reviewer">
+
+                <div class="reviewer-avatar">
+                  RG
+                </div>
+
+                <div>
+                  <div class="reviewer-name">
+                    Rahul Gupta Family
+                  </div>
+
+                  <div class="reviewer-location">
+                    Delhi, India
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="review-date">
+                September 2025
+              </span>
+
+            </div>
+
+            <div class="review-stars">
+
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3 class="review-title">
+              A holiday everyone enjoyed
+            </h3>
+
+            <p class="review-text">
+              Planning a trip for multiple generations
+              can be difficult, but the itinerary worked
+              beautifully for everyone. We would happily
+              travel with Wanderly again.
+            </p>
+
+            <div class="review-trip">
+              <i class="fa-solid fa-umbrella-beach"></i>
+              Andaman Family Holiday
+            </div>
+
+          </article>
+
+
+          <!-- NO RESULTS -->
+
+          <div class="no-results" id="noResults">
+
+            <i class="fa-regular fa-comment-dots"></i>
+
+            <h3>
+              No reviews found
+            </h3>
+
+            <p>
+              Try selecting another traveller category.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             TRUST SECTION
+        ================================================== -->
+
+    <section class="trust-section">
+
+      <div class="container">
+
+        <div class="trust-grid">
+
+
+          <div class="trust-image reveal">
+
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1100&q=85"
+              alt="Traveller enjoying a scenic mountain destination" loading="lazy">
+
+            <div class="trust-image-badge">
+
+              <strong>500+</strong>
+
+              <span>
+                Happy travellers
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="trust-content reveal">
+
+            <div class="section-label">
+              Why Travellers Choose Us
+            </div>
+
+            <h2 class="section-title">
+              More than a booking.
+              A journey designed around you.
+            </h2>
+
+            <p class="section-text">
+              We believe the best trips begin with
+              understanding the traveller. That is why
+              we focus on your interests, pace, comfort
+              and budget before suggesting a journey.
+            </p>
+
+
+            <div class="trust-points">
+
+              <div class="trust-point">
+
+                <div class="trust-point-icon">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Personal Enquiry
+                  </h4>
+
+                  <p>
+                    Tell us what you want.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="trust-point">
+
+                <div class="trust-point-icon">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Thoughtful Planning
+                  </h4>
+
+                  <p>
+                    Built around your journey.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="trust-point">
+
+                <div class="trust-point-icon">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Helpful Support
+                  </h4>
+
+                  <p>
+                    We're here when you need us.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="trust-point">
+
+                <div class="trust-point-icon">
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Memorable Experiences
+                  </h4>
+
+                  <p>
+                    Travel worth remembering.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             WRITE REVIEW CTA
+        ================================================== -->
+
+    <section class="write-review">
+
+      <div class="container">
+
+        <div class="review-cta reveal">
+
+          <div class="review-cta-content">
+
+            <div class="review-cta-icon">
+              <i class="fa-solid fa-pen"></i>
+            </div>
+
+            <h2>
+              Travelled with us?
+              Share your story.
+            </h2>
+
+            <p>
+              Your experience can help another traveller
+              choose their next adventure with confidence.
+            </p>
+
+            <a href="contact.html" class="primary-button">
+
+              Write a Review
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo" aria-label="Wanderly Travels Home">
+
+            <span class="logo-icon">
+              <i class="fa-solid fa-location-arrow"></i>
+            </span>
+
+            <span class="logo-text">
+              Wanderly<span>Travels</span>
+            </span>
+
+          </a>
+
+          <p>
+            See More. Feel More.
+            Thoughtfully planned journeys,
+            meaningful experiences and memories
+            worth bringing home.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" class="social-link" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a href="#" class="social-link" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+            <a href="#" class="social-link" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+            <a href="#" class="social-link" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Explore
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="packages.html">
+                Packages
+              </a>
+            </li>
+
+            <li>
+              <a href="destinations.html">
+                Destinations
+              </a>
+            </li>
+
+            <li>
+              <a href="offers.html">
+                Offers
+              </a>
+            </li>
+
+            <li>
+              <a href="custom-trip.html">
+                Custom Trip
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Company
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="our-story.html">
+                Our Story
+              </a>
+            </li>
+
+            <li>
+              <a href="reviews.html" class="active" aria-current="page">
+                Reviews
+              </a>
+            </li>
+
+            <li>
+              <a href="faq.html">
+                FAQ
+              </a>
+            </li>
+
+            <li>
+              <a href="privacy.html">
+                Privacy Policy
+              </a>
+            </li>
+
+            <li>
+              <a href="terms.html">
+                Terms & Conditions
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Contact
+          </h3>
+
+          <div class="footer-contact">
+
+            <div class="contact-item">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <span>
+                hello@wanderlytravels.com
+              </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <i class="fa-solid fa-phone"></i>
+
+              <span>
+                +91 98765 43210
+              </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <span>
+                India
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span>
+          Wanderly Travels. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+          <a href="privacy.html">
+            Privacy
+          </a>
+
+          <a href="terms.html">
+            Terms
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         COMBINED JAVASCRIPT
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+
+      /* =================================================
+         ELEMENTS
+      ================================================== */
+
+      const preloader =
+        document.getElementById("preloader");
+
+      const header =
+        document.getElementById("header");
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const navMenu =
+        document.getElementById("navMenu");
+
+      const backTop =
+        document.getElementById("backTop");
+
+      const currentYear =
+        document.getElementById("currentYear");
+
+      const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+      const reviewCards =
+        document.querySelectorAll(".review-card");
+
+      const reviewCount =
+        document.getElementById("reviewCount");
+
+      const noResults =
+        document.getElementById("noResults");
+
+
+      /* =================================================
+         PRELOADER
+      ================================================== */
+
+      const hidePreloader = () => {
+
+        if (!preloader) return;
+
+        preloader.classList.add("hide");
+
+      };
+
+      window.addEventListener("load", hidePreloader);
+
+      setTimeout(hidePreloader, 1800);
+
+
+      /* =================================================
+         CURRENT YEAR
+      ================================================== */
+
+      if (currentYear) {
+
+        currentYear.textContent =
+          new Date().getFullYear();
+
+      }
+
+
+      /* =================================================
+         MOBILE NAVIGATION
+      ================================================== */
+
+      const closeMenu = () => {
+
+        if (!navMenu || !menuToggle) return;
+
+        navMenu.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+        const icon =
+          menuToggle.querySelector("i");
+
+        if (icon) {
+
+          icon.classList.remove("fa-xmark");
+
+          icon.classList.add("fa-bars");
+
+        }
+
+        document.body.classList.remove(
+          "menu-open"
+        );
+
+      };
+
+
+      const openMenu = () => {
+
+        if (!navMenu || !menuToggle) return;
+
+        navMenu.classList.add("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Close navigation menu"
+        );
+
+        const icon =
+          menuToggle.querySelector("i");
+
+        if (icon) {
+
+          icon.classList.remove("fa-bars");
+
+          icon.classList.add("fa-xmark");
+
+        }
+
+        document.body.classList.add(
+          "menu-open"
+        );
+
+      };
+
+
+      if (menuToggle) {
+
+        menuToggle.addEventListener(
+          "click",
+          () => {
+
+            const isOpen =
+              navMenu.classList.contains("open");
+
+            if (isOpen) {
+
+              closeMenu();
+
+            } else {
+
+              openMenu();
+
+            }
+
+          }
+        );
+
+      }
+
+
+      /* Close menu when navigation link is clicked */
+
+      document
+        .querySelectorAll(".nav-menu a")
+        .forEach(link => {
+
+          link.addEventListener(
+            "click",
+            closeMenu
+          );
+
+        });
+
+
+      /* Close menu when clicking outside */
+
+      document.addEventListener(
+        "click",
+        event => {
+
+          if (!navMenu ||
+            !menuToggle) return;
+
+          if (
+            navMenu.classList.contains("open") &&
+            !navMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+          ) {
+
+            closeMenu();
+
+          }
+
+        }
+      );
+
+
+      /* Escape key */
+
+      document.addEventListener(
+        "keydown",
+        event => {
+
+          if (event.key === "Escape") {
+
+            closeMenu();
+
+          }
+
+        }
+      );
+
+
+      /* Resize */
+
+      window.addEventListener(
+        "resize",
+        () => {
+
+          if (
+            window.innerWidth > 900
+          ) {
+
+            closeMenu();
+
+          }
+
+        }
+      );
+
+
+      /* =================================================
+         HEADER SCROLL
+      ================================================== */
+
+      const updateHeader = () => {
+
+        if (!header) return;
+
+        if (window.scrollY > 40) {
+
+          header.classList.add("scrolled");
+
+        } else {
+
+          header.classList.remove("scrolled");
+
+        }
+
+      };
+
+      window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+      );
+
+      updateHeader();
+
+
+      /* =================================================
+         REVEAL ANIMATION
+      ================================================== */
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+
+        const revealObserver =
+          new IntersectionObserver(
+            entries => {
+
+              entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  revealObserver.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              });
+
+            },
+            {
+              threshold: 0.12,
+              rootMargin: "0px 0px -40px 0px"
+            }
+          );
+
+        revealElements.forEach(
+          element => {
+
+            revealObserver.observe(element);
+
+          }
+        );
+
+      } else {
+
+        revealElements.forEach(
+          element => {
+
+            element.classList.add("visible");
+
+          }
+        );
+
+      }
+
+
+      /* =================================================
+         REVIEW FILTER
+      ================================================== */
+
+      const updateReviewCount = () => {
+
+        let visibleCount = 0;
+
+        reviewCards.forEach(card => {
+
+          if (
+            !card.classList.contains("hidden")
+          ) {
+
+            visibleCount++;
+
+          }
+
+        });
+
+        if (reviewCount) {
+
+          reviewCount.textContent =
+            visibleCount;
+
+        }
+
+        if (noResults) {
+
+          noResults.style.display =
+            visibleCount === 0
+              ? "block"
+              : "none";
+
+        }
+
+      };
+
+
+      filterButtons.forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            filterButtons.forEach(
+              btn => {
+
+                btn.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+            button.classList.add("active");
+
+            const filter =
+              button.dataset.filter;
+
+            reviewCards.forEach(card => {
+
+              const category =
+                card.dataset.category;
+
+              if (
+                filter === "all" ||
+                category === filter
+              ) {
+
+                card.classList.remove(
+                  "hidden"
+                );
+
+                card.style.opacity = "0";
+
+                card.style.transform =
+                  "translateY(15px)";
+
+                requestAnimationFrame(() => {
+
+                  card.style.transition =
+                    "opacity .35s ease, transform .35s ease";
+
+                  card.style.opacity = "1";
+
+                  card.style.transform =
+                    "translateY(0)";
+
+                });
+
+              } else {
+
+                card.classList.add(
+                  "hidden"
+                );
+
+              }
+
+            });
+
+            updateReviewCount();
+
+          }
+        );
+
+      });
+
+
+      /* =================================================
+         BACK TO TOP
+      ================================================== */
+
+      const updateBackTop = () => {
+
+        if (!backTop) return;
+
+        if (window.scrollY > 600) {
+
+          backTop.classList.add("show");
+
+        } else {
+
+          backTop.classList.remove("show");
+
+        }
+
+      };
+
+      window.addEventListener(
+        "scroll",
+        updateBackTop,
+        { passive: true }
+      );
+
+      updateBackTop();
+
+
+      if (backTop) {
+
+        backTop.addEventListener(
+          "click",
+          () => {
+
+            window.scrollTo({
+              top: 0,
+              behavior:
+                window.matchMedia(
+                  "(prefers-reduced-motion: reduce)"
+                ).matches
+                  ? "auto"
+                  : "smooth"
+            });
+
+          }
+        );
+
+      }
+
+
+      /* =================================================
+         SAME-PAGE SMOOTH LINKS
+      ================================================== */
+
+      document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(link => {
+
+          link.addEventListener(
+            "click",
+            event => {
+
+              const targetId =
+                link.getAttribute("href");
+
+              if (
+                !targetId ||
+                targetId === "#"
+              ) {
+
+                return;
+
+              }
+
+              const target =
+                document.querySelector(
+                  targetId
+                );
+
+              if (!target) return;
+
+              event.preventDefault();
+
+              const headerHeight =
+                header
+                  ? header.offsetHeight
+                  : 0;
+
+              const targetPosition =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                headerHeight -
+                15;
+
+              window.scrollTo({
+
+                top: targetPosition,
+
+                behavior:
+                  window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                  ).matches
+                    ? "auto"
+                    : "smooth"
+
+              });
+
+            }
+          );
+
+        });
+
+
+      /* =================================================
+         IMAGE FALLBACK
+      ================================================== */
+
+      document
+        .querySelectorAll("img")
+        .forEach(img => {
+
+          img.addEventListener(
+            "error",
+            () => {
+
+              img.src =
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80";
+
+            },
+            { once: true }
+          );
+
+        });
+
+
+      /* =================================================
+         KEYBOARD ACCESSIBILITY
+      ================================================== */
+
+      document.addEventListener(
+        "keydown",
+        event => {
+
+          if (
+            event.key === "Tab"
+          ) {
+
+            document.body.classList.add(
+              "keyboard-user"
+            );
+
+          }
+
+        }
+      );
+
+
+      /* =================================================
+         INITIAL REVIEW COUNT
+      ================================================== */
+
+      updateReviewCount();
+
+
+      /* =================================================
+         CONSOLE MESSAGE
+      ================================================== */
+
+      console.log(
+        "%cWanderly Travels Reviews loaded successfully.",
+        "color:#18aa9d;font-weight:700;"
+      );
+
+    });
+
+  </script>
+
+</body>
+
+</html>

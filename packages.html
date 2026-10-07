@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Explore curated travel packages from Wanderly Travels. Discover beach holidays, mountain adventures, heritage journeys and international escapes.">
+
+  <title>Travel Packages | Wanderly Travels</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Homepage Shared CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Packages Page CSS -->
+  <link rel="stylesheet" href="css/packages.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+
+  <div class="preloader" id="preloader">
+
+    <div class="loader-content">
+
+      <div class="loader-plane">
+        <i class="fa-solid fa-plane"></i>
+      </div>
+
+      <span>Wanderly</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         HEADER — SAME AS HOMEPAGE
+    ====================================================== -->
+
+  <header class="header" id="header">
+
+    <nav class="nav container">
+
+      <!-- LOGO -->
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-icon">
+          <i class="fa-solid fa-compass"></i>
+        </span>
+
+        <span class="logo-text">
+
+          <strong>Wanderly</strong>
+
+          <small>TRAVELS</small>
+
+        </span>
+
+      </a>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-menu" id="navMenu">
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="destinations.html" class="nav-link">
+          Destinations
+        </a>
+
+        <a href="packages.html" class="nav-link active">
+          Packages
+        </a>
+
+        <a href="about.html" class="nav-link">
+          About
+        </a>
+
+        <a href="contact.html" class="nav-link">
+          Contact
+        </a>
+
+        <a href="custom-trip.html" class="nav-cta">
+          Plan My Trip
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+  <main>
+
+
+    <!-- =================================================
+             PACKAGES HERO
+        ================================================== -->
+
+    <section class="packages-hero">
+
+      <div class="packages-hero-bg">
+
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85"
+          alt="Beautiful tropical travel destination">
+
+      </div>
+
+      <div class="packages-hero-overlay"></div>
+
+
+      <div class="container packages-hero-container">
+
+        <div class="packages-hero-content reveal">
+
+          <span class="hero-eyebrow">
+
+            <i class="fa-solid fa-suitcase-rolling"></i>
+
+            CURATED TRAVEL EXPERIENCES
+
+          </span>
+
+          <h1>
+
+            Travel more.
+            <span>Worry less.</span>
+
+          </h1>
+
+          <p>
+            Discover thoughtfully designed holiday
+            packages with beautiful stays, memorable
+            experiences and journeys planned around you.
+          </p>
+
+
+          <div class="hero-breadcrumb">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+              Packages
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+             PACKAGE INTRO
+        ================================================== -->
+
+    <section class="packages-section">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <span class="eyebrow">
+
+            <i class="fa-solid fa-sparkles"></i>
+
+            FIND YOUR PERFECT GETAWAY
+
+          </span>
+
+          <h2>
+
+            Trips made for
+            <span>you</span>
+
+          </h2>
+
+          <p>
+            Whether you want a relaxing beach holiday,
+            an adventurous mountain escape or an
+            unforgettable international experience,
+            we have something for every traveller.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+                     PACKAGE FILTERS
+                ================================================== -->
+
+        <div class="package-filters reveal">
+
+          <button class="package-filter active" data-package-filter="all">
+
+            All Packages
+
+          </button>
+
+          <button class="package-filter" data-package-filter="beach">
+
+            <i class="fa-solid fa-umbrella-beach"></i>
+
+            Beach
+
+          </button>
+
+          <button class="package-filter" data-package-filter="mountain">
+
+            <i class="fa-solid fa-mountain"></i>
+
+            Mountain
+
+          </button>
+
+          <button class="package-filter" data-package-filter="heritage">
+
+            <i class="fa-solid fa-landmark"></i>
+
+            Heritage
+
+          </button>
+
+          <button class="package-filter" data-package-filter="international">
+
+            <i class="fa-solid fa-earth-americas"></i>
+
+            International
+
+          </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+                     PACKAGES GRID
+                ================================================== -->
+
+        <div class="packages-grid">
+
+
+          <!-- PACKAGE 01 -->
+
+          <article class="package-card reveal" data-package-category="beach">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=85"
+                alt="Goa beach holiday">
+
+              <span class="package-tag">
+                Best Seller
+              </span>
+
+              <span class="package-days">
+                4 Days / 3 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Goa package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Goa, India
+
+              </div>
+
+              <h3>
+                Goa Beach Escape
+              </h3>
+
+              <p>
+                Relax on beautiful beaches,
+                explore local culture and enjoy
+                unforgettable coastal evenings.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  3★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-car"></i>
+                  Transfers
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹14,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 02 -->
+
+          <article class="package-card reveal" data-package-category="mountain">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=1200&q=85"
+                alt="Manali mountain holiday">
+
+              <span class="package-tag">
+                Adventure
+              </span>
+
+              <span class="package-days">
+                5 Days / 4 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Manali package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Himachal Pradesh
+
+              </div>
+
+              <h3>
+                Manali Mountain Escape
+              </h3>
+
+              <p>
+                Discover snow-capped mountains,
+                peaceful valleys, scenic roads
+                and thrilling adventures.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  3★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-car"></i>
+                  Transfers
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹18,499
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 03 -->
+
+          <article class="package-card reveal" data-package-category="heritage">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=85"
+                alt="Jaipur Rajasthan holiday">
+
+              <span class="package-tag">
+                Cultural
+              </span>
+
+              <span class="package-days">
+                5 Days / 4 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Jaipur package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Rajasthan, India
+
+              </div>
+
+              <h3>
+                Royal Rajasthan
+              </h3>
+
+              <p>
+                Step into India's royal past with
+                magnificent forts, palaces,
+                markets and authentic cuisine.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  4★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-car"></i>
+                  Transfers
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹22,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 04 -->
+
+          <article class="package-card reveal" data-package-category="beach">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1200&q=85"
+                alt="Andaman island holiday">
+
+              <span class="package-tag">
+                Island Escape
+              </span>
+
+              <span class="package-days">
+                6 Days / 5 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Andaman package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Andaman, India
+
+              </div>
+
+              <h3>
+                Andaman Island Escape
+              </h3>
+
+              <p>
+                Swim in crystal-clear waters,
+                explore coral reefs and unwind
+                on tropical beaches.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  4★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-ship"></i>
+                  Ferry
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹27,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 05 -->
+
+          <article class="package-card reveal" data-package-category="international">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1200&q=85"
+                alt="Thailand holiday">
+
+              <span class="package-tag">
+                International
+              </span>
+
+              <span class="package-days">
+                6 Days / 5 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Thailand package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Thailand
+
+              </div>
+
+              <h3>
+                Thailand Tropical
+              </h3>
+
+              <p>
+                Experience tropical islands,
+                vibrant markets, temples and
+                unforgettable Thai cuisine.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  4★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-plane"></i>
+                  Flights
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹39,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 06 -->
+
+          <article class="package-card reveal" data-package-category="international">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=85"
+                alt="Dubai holiday">
+
+              <span class="package-tag">
+                Luxury
+              </span>
+
+              <span class="package-days">
+                5 Days / 4 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Dubai package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Dubai, UAE
+
+              </div>
+
+              <h3>
+                Dubai Luxury Escape
+              </h3>
+
+              <p>
+                Discover iconic landmarks,
+                desert adventures, luxury
+                shopping and spectacular views.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  5★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-plane"></i>
+                  Flights
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹44,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 07 -->
+
+          <article class="package-card reveal" data-package-category="mountain">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=85"
+                alt="Ladakh adventure">
+
+              <span class="package-tag">
+                Adventure
+              </span>
+
+              <span class="package-days">
+                7 Days / 6 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Ladakh package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Ladakh, India
+
+              </div>
+
+              <h3>
+                Ladakh High-Altitude Adventure
+              </h3>
+
+              <p>
+                Ride through dramatic landscapes,
+                visit ancient monasteries and
+                experience the mighty Himalayas.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  3★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Meals
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-car"></i>
+                  Transport
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹31,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PACKAGE 08 -->
+
+          <article class="package-card reveal" data-package-category="heritage">
+
+            <div class="package-image">
+
+              <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=85"
+                alt="Agra heritage holiday">
+
+              <span class="package-tag">
+                Weekend
+              </span>
+
+              <span class="package-days">
+                3 Days / 2 Nights
+              </span>
+
+              <button class="package-wishlist" aria-label="Add Agra package to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+
+            <div class="package-content">
+
+              <div class="package-location">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Agra, India
+
+              </div>
+
+              <h3>
+                Agra Heritage Weekend
+              </h3>
+
+              <p>
+                Explore the Taj Mahal, historic
+                forts, beautiful architecture and
+                local flavours.
+              </p>
+
+
+              <div class="package-highlights">
+
+                <span>
+                  <i class="fa-solid fa-hotel"></i>
+                  3★ Stay
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-utensils"></i>
+                  Breakfast
+                </span>
+
+                <span>
+                  <i class="fa-solid fa-car"></i>
+                  Transfers
+                </span>
+
+              </div>
+
+
+              <div class="package-footer">
+
+                <div class="package-price">
+
+                  <small>
+                    Starting from
+                  </small>
+
+                  <strong>
+                    ₹10,999
+                  </strong>
+
+                  <span>
+                    / person
+                  </span>
+
+                </div>
+
+                <a href="contact.html" class="package-btn">
+
+                  View Trip
+
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+             WHY WANDERLY
+        ================================================== -->
+
+    <section class="package-benefits">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <span class="eyebrow">
+            <i class="fa-solid fa-heart"></i>
+            WHY WANDERLY
+          </span>
+
+          <h2>
+            More than a
+            <span>package</span>
+          </h2>
+
+          <p>
+            We take care of the details so you can
+            focus on enjoying the journey.
+          </p>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+
+          <div class="benefit-card reveal">
+
+            <div class="benefit-icon">
+              <i class="fa-solid fa-route"></i>
+            </div>
+
+            <h3>
+              Thoughtful Itineraries
+            </h3>
+
+            <p>
+              Every journey is carefully planned
+              to balance sightseeing, relaxation
+              and authentic experiences.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card reveal">
+
+            <div class="benefit-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <h3>
+              Travel Support
+            </h3>
+
+            <p>
+              Our team is available to help before,
+              during and after your trip.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card reveal">
+
+            <div class="benefit-icon">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <h3>
+              Transparent Pricing
+            </h3>
+
+            <p>
+              Clear package pricing with no confusing
+              surprises hidden along the way.
+            </p>
+
+          </div>
+
+
+          <div class="benefit-card reveal">
+
+            <div class="benefit-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <h3>
+              Personal Touch
+            </h3>
+
+            <p>
+              Need something different? We can
+              customise your trip around your needs.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+             CUSTOM TRIP CTA
+        ================================================== -->
+
+    <section class="packages-cta">
+
+      <div class="packages-cta-bg">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85"
+          alt="Couple travelling">
+
+      </div>
+
+      <div class="packages-cta-overlay"></div>
+
+
+      <div class="container packages-cta-container">
+
+        <div class="packages-cta-content reveal">
+
+          <span class="eyebrow light">
+
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+            MAKE IT YOUR OWN
+
+          </span>
+
+          <h2>
+
+            Want a trip that's
+            <span>uniquely yours?</span>
+
+          </h2>
+
+          <p>
+            Tell us where you want to go, what you
+            want to experience and your budget.
+            We'll help turn your idea into a journey.
+          </p>
+
+          <a href="custom-trip.html" class="package-cta-btn">
+
+            Plan My Custom Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+         FOOTER — SAME AS HOMEPAGE
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-icon">
+              <i class="fa-solid fa-compass"></i>
+            </span>
+
+            <span class="logo-text">
+
+              <strong>Wanderly</strong>
+
+              <small>TRAVELS</small>
+
+            </span>
+
+          </a>
+
+
+          <p>
+            We create thoughtful journeys,
+            unforgettable experiences and
+            memories that stay with you long
+            after the trip ends.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+          <h3>
+            Company
+          </h3>
+
+          <a href="about.html">
+            About Us
+          </a>
+
+          <a href="destinations.html">
+            Destinations
+          </a>
+
+          <a href="packages.html">
+            Travel Packages
+          </a>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+        </div>
+
+
+
+        <!-- EXPLORE -->
+
+        <div class="footer-column">
+
+          <h3>
+            Explore
+          </h3>
+
+          <a href="destinations.html">
+            Popular Places
+          </a>
+
+          <a href="packages.html">
+            Best Packages
+          </a>
+
+          <a href="custom-trip.html">
+            Custom Trips
+          </a>
+
+          <a href="reviews.html">
+            Traveller Reviews
+          </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+          <h3>
+            Get In Touch
+          </h3>
+
+          <a href="tel:+919876543210">
+
+            <i class="fa-solid fa-phone"></i>
+
+            +91 98765 43210
+
+          </a>
+
+          <a href="mailto:hello@wanderlytravels.com">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            hello@wanderlytravels.com
+
+          </a>
+
+          <span>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            India
+
+          </span>
+
+          <a href="custom-trip.html" class="footer-plan-btn">
+
+            Plan Your Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <span>
+
+          ©
+          <span data-current-year></span>
+          Wanderly Travels.
+          All rights reserved.
+
+        </span>
+
+        <div>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+         PACKAGES JAVASCRIPT
+    ====================================================== -->
+
+  <script src="js/packages.js"></script>
+
+</body>
+
+</html>

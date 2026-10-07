@@ -1,0 +1,3832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Explore beautiful travel moments and destinations through the Wanderly Travels gallery. Get inspired for your next unforgettable journey.">
+
+  <meta name="keywords"
+    content="Wanderly Travels gallery, travel gallery, holiday photos, travel destinations, India travel, vacation inspiration">
+
+  <meta name="author" content="Wanderly Travels">
+
+  <title>Travel Gallery | Wanderly Travels</title>
+
+  <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+  <!-- =====================================================
+         COMBINED CSS
+    ====================================================== -->
+
+  <style>
+    /* =====================================================
+           ROOT VARIABLES
+        ====================================================== */
+
+    :root {
+
+      --primary: #18aa9d;
+      --primary-dark: #108d82;
+      --primary-light: #dff6f3;
+
+      --navy: #102536;
+      --navy-dark: #071624;
+      --navy-soft: #193547;
+
+      --white: #ffffff;
+      --off-white: #f8fbfa;
+      --cream: #f5f8f7;
+
+      --text: #24343d;
+      --text-light: #64747c;
+      --muted: #87959b;
+
+      --border: #e5eceb;
+
+      --gold: #dcae58;
+      --gold-light: #f8edda;
+
+      --shadow-sm:
+        0 8px 25px rgba(7, 22, 36, 0.06);
+
+      --shadow-md:
+        0 18px 45px rgba(7, 22, 36, 0.10);
+
+      --shadow-lg:
+        0 30px 70px rgba(7, 22, 36, 0.16);
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+
+      --transition: 0.35s ease;
+
+      --font-body: "DM Sans", sans-serif;
+      --font-display: "Playfair Display", Georgia, serif;
+    }
+
+
+    /* =====================================================
+           RESET
+        ====================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
+
+    /* =====================================================
+           ACCESSIBILITY
+        ====================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+
+      z-index: 9999;
+
+      padding: 12px 18px;
+
+      background: var(--primary);
+      color: var(--white);
+
+      border-radius: 8px;
+
+      font-weight: 700;
+
+      transition: top 0.3s ease;
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+
+    /* =====================================================
+           CONTAINER
+        ====================================================== */
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (max-width: 1100px) {
+
+      .container {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+    }
+
+    @media (max-width: 900px) {
+
+      .container {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+    }
+
+    @media (max-width: 380px) {
+
+      .container {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+    }
+
+
+    /* =====================================================
+           PRELOADER
+        ====================================================== */
+
+    .preloader {
+      position: fixed;
+      inset: 0;
+
+      z-index: 10000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy-dark);
+
+      transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+    }
+
+    .preloader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader {
+      width: 55px;
+      height: 55px;
+
+      border: 3px solid rgba(255, 255, 255, 0.14);
+
+      border-top-color: var(--primary);
+
+      border-radius: 50%;
+
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+
+    /* =====================================================
+           HEADER
+        ====================================================== */
+
+    .header {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.96);
+
+      border-bottom: 1px solid transparent;
+
+      transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+
+      border-color: var(--border);
+
+      box-shadow:
+        0 8px 30px rgba(7, 22, 36, 0.08);
+    }
+
+    .nav {
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    /* =====================================================
+           LOGO
+        ====================================================== */
+
+    .logo {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(135deg,
+          var(--primary),
+          var(--primary-dark));
+
+      color: var(--white);
+
+      box-shadow:
+        0 8px 20px rgba(24, 170, 157, 0.25);
+    }
+
+    .logo-icon i {
+      font-size: 17px;
+    }
+
+    .logo-text {
+      color: var(--navy);
+
+      font-size: 21px;
+
+      font-weight: 700;
+
+      letter-spacing: -0.4px;
+    }
+
+    .logo-text span {
+      color: var(--primary);
+    }
+
+
+    /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+    .nav-menu {
+      display: flex;
+
+      align-items: center;
+
+      gap: 27px;
+
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+
+      padding: 8px 0;
+
+      color: var(--text);
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: color var(--transition);
+    }
+
+    .nav-link::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      bottom: 1px;
+
+      width: 0;
+      height: 2px;
+
+      background: var(--primary);
+
+      border-radius: 5px;
+
+      transition: width var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary-dark);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+
+    /* =====================================================
+           NAV CTA
+        ====================================================== */
+
+    .nav-cta {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 12px 18px;
+
+      background: var(--navy);
+
+      color: var(--white);
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition:
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+    .menu-toggle {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background: var(--cream);
+
+      color: var(--navy);
+
+      font-size: 19px;
+    }
+
+
+    /* =====================================================
+           HERO
+        ====================================================== */
+
+    .gallery-hero {
+      position: relative;
+
+      min-height: 560px;
+
+      padding-top: 150px;
+      padding-bottom: 90px;
+
+      display: flex;
+
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(110deg,
+          rgba(7, 22, 36, 0.96) 0%,
+          rgba(7, 22, 36, 0.82) 45%,
+          rgba(7, 22, 36, 0.50) 100%),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;
+    }
+
+    .hero-decoration {
+      position: absolute;
+
+      width: 380px;
+      height: 380px;
+
+      right: -150px;
+      bottom: -190px;
+
+      border: 1px solid rgba(255, 255, 255, 0.13);
+
+      border-radius: 50%;
+    }
+
+    .hero-decoration::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 45px;
+
+      border: 1px solid rgba(255, 255, 255, 0.09);
+
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 18px;
+
+      color: #9ce8df;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 30px;
+      height: 2px;
+
+      background: var(--primary);
+
+      border-radius: 5px;
+    }
+
+    .hero-title {
+      color: var(--white);
+
+      font-family: var(--font-display);
+
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-title span {
+      color: #75d8ce;
+    }
+
+    .hero-description {
+      max-width: 690px;
+
+      color: rgba(255, 255, 255, 0.78);
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+      margin-bottom: 28px;
+    }
+
+    .breadcrumb {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      transition: color var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb i {
+      font-size: 9px;
+    }
+
+
+    /* =====================================================
+           SECTION
+        ====================================================== */
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-soft {
+      background: var(--off-white);
+    }
+
+    .section-heading {
+      max-width: 750px;
+
+      margin: 0 auto 45px;
+
+      text-align: center;
+    }
+
+    .section-label {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--primary-dark);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.8px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+    }
+
+    .section-label::before {
+      content: "";
+
+      width: 25px;
+      height: 2px;
+
+      background: var(--primary);
+
+      border-radius: 5px;
+    }
+
+    .section-title {
+      color: var(--navy);
+
+      font-family: var(--font-display);
+
+      font-size: clamp(34px, 4vw, 50px);
+
+      line-height: 1.15;
+
+      letter-spacing: -0.8px;
+
+      margin-bottom: 16px;
+    }
+
+    .section-text {
+      color: var(--text-light);
+
+      font-size: 16px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+           FILTER BUTTONS
+        ====================================================== */
+
+    .gallery-filter {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-bottom: 45px;
+    }
+
+    .filter-btn {
+      padding: 10px 17px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      color: var(--text-light);
+
+      border-radius: 30px;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      transition:
+        background var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary);
+
+      color: var(--primary-dark);
+
+      transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+      background: var(--primary);
+
+      border-color: var(--primary);
+
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+           GALLERY GRID
+        ====================================================== */
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(12, 1fr);
+
+      grid-auto-rows: 250px;
+
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: var(--radius-md);
+
+      cursor: pointer;
+
+      background: var(--cream);
+
+      box-shadow: var(--shadow-sm);
+
+      opacity: 1;
+
+      transition:
+        transform var(--transition),
+        opacity var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-item.hidden {
+      display: none;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-column: span 7;
+      grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(2) {
+      grid-column: span 5;
+    }
+
+    .gallery-item:nth-child(3) {
+      grid-column: span 5;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: span 4;
+    }
+
+    .gallery-item:nth-child(5) {
+      grid-column: span 4;
+    }
+
+    .gallery-item:nth-child(6) {
+      grid-column: span 4;
+    }
+
+    .gallery-item:nth-child(7) {
+      grid-column: span 5;
+    }
+
+    .gallery-item:nth-child(8) {
+      grid-column: span 7;
+    }
+
+    .gallery-item:nth-child(9) {
+      grid-column: span 7;
+    }
+
+    .gallery-item:nth-child(10) {
+      grid-column: span 5;
+    }
+
+    .gallery-image {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.7s ease;
+    }
+
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.07);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      padding: 25px;
+
+      background:
+        linear-gradient(to top,
+          rgba(7, 22, 36, 0.82),
+          rgba(7, 22, 36, 0.05) 65%);
+
+      opacity: 0;
+
+      transition: opacity var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-category {
+      color: #8de1d8;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 4px;
+    }
+
+    .gallery-title {
+      color: var(--white);
+
+      font-family: var(--font-display);
+
+      font-size: 23px;
+
+      line-height: 1.2;
+
+      margin-bottom: 8px;
+    }
+
+    .gallery-location {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      color: rgba(255, 255, 255, 0.75);
+
+      font-size: 12px;
+    }
+
+    .gallery-view {
+      position: absolute;
+
+      top: 20px;
+      right: 20px;
+
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.92);
+
+      color: var(--navy);
+
+      font-size: 14px;
+
+      transform: translateY(-10px);
+
+      opacity: 0;
+
+      transition:
+        opacity var(--transition),
+        transform var(--transition);
+    }
+
+    .gallery-item:hover .gallery-view {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+           INSPIRATION STRIP
+        ====================================================== */
+
+    .inspiration {
+      padding: 95px 0;
+
+      background: var(--navy-dark);
+
+      color: var(--white);
+
+      overflow: hidden;
+    }
+
+    .inspiration-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1.2fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .inspiration-content .section-label {
+      color: #83ddd3;
+    }
+
+    .inspiration-content .section-title {
+      color: var(--white);
+    }
+
+    .inspiration-content .section-text {
+      color: rgba(255, 255, 255, 0.65);
+
+      margin-bottom: 25px;
+    }
+
+    .inspiration-points {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 15px;
+    }
+
+    .inspiration-point {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 12px;
+    }
+
+    .inspiration-point-icon {
+      width: 38px;
+      height: 38px;
+
+      flex: 0 0 38px;
+
+      display: grid;
+
+      place-items: center;
+
+      background: rgba(24, 170, 157, 0.13);
+
+      color: #79ddd4;
+
+      border-radius: 10px;
+    }
+
+    .inspiration-point h4 {
+      color: var(--white);
+
+      font-size: 14px;
+
+      margin-bottom: 2px;
+    }
+
+    .inspiration-point p {
+      color: rgba(255, 255, 255, 0.48);
+
+      font-size: 12px;
+
+      line-height: 1.5;
+    }
+
+    .inspiration-images {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+    }
+
+    .inspiration-image {
+      height: 220px;
+
+      overflow: hidden;
+
+      border-radius: 18px;
+    }
+
+    .inspiration-image.large {
+      grid-row: span 2;
+
+      height: 455px;
+    }
+
+    .inspiration-image img {
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.7s ease;
+    }
+
+    .inspiration-image:hover img {
+      transform: scale(1.06);
+    }
+
+
+    /* =====================================================
+           LIGHTBOX
+        ====================================================== */
+
+    .lightbox {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 11000;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+
+      background: rgba(3, 12, 20, 0.95);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    .lightbox.open {
+      opacity: 1;
+
+      visibility: visible;
+    }
+
+    .lightbox-content {
+      position: relative;
+
+      width: min(1100px, 100%);
+
+      max-height: 90vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+
+      max-height: 78vh;
+
+      object-fit: contain;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+    }
+
+    .lightbox-caption {
+      width: 100%;
+
+      padding-top: 16px;
+
+      text-align: center;
+
+      color: rgba(255, 255, 255, 0.75);
+
+      font-size: 13px;
+    }
+
+    .lightbox-caption strong {
+      display: block;
+
+      color: var(--white);
+
+      font-family: var(--font-display);
+
+      font-size: 20px;
+
+      margin-bottom: 2px;
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.10);
+
+      color: var(--white);
+
+      transition:
+        background var(--transition),
+        transform var(--transition);
+    }
+
+    .lightbox-close:hover,
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      background: var(--primary);
+
+      transform: translateY(-2px);
+    }
+
+    .lightbox-close {
+      top: -8px;
+      right: -8px;
+
+      z-index: 2;
+    }
+
+    .lightbox-prev {
+      left: -70px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+
+    .lightbox-next {
+      right: -70px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+    }
+
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      transform: translateY(-50%) scale(1.04);
+    }
+
+
+    /* =====================================================
+           CTA
+        ====================================================== */
+
+    .gallery-cta {
+      padding: 100px 0;
+
+      background: var(--off-white);
+    }
+
+    .cta-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 65px 40px;
+
+      background:
+        linear-gradient(135deg,
+          #edf9f7,
+          #f8fbfa);
+
+      border: 1px solid #dcece9;
+
+      border-radius: var(--radius-lg);
+
+      text-align: center;
+    }
+
+    .cta-box::before,
+    .cta-box::after {
+      content: "";
+
+      position: absolute;
+
+      border: 1px solid rgba(24, 170, 157, 0.14);
+
+      border-radius: 50%;
+    }
+
+    .cta-box::before {
+      width: 270px;
+      height: 270px;
+
+      left: -140px;
+      top: -170px;
+    }
+
+    .cta-box::after {
+      width: 210px;
+      height: 210px;
+
+      right: -100px;
+      bottom: -130px;
+    }
+
+    .cta-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 670px;
+
+      margin: auto;
+    }
+
+    .cta-icon {
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin: 0 auto 18px;
+
+      border-radius: 16px;
+
+      background: var(--white);
+
+      color: var(--primary-dark);
+
+      box-shadow: var(--shadow-sm);
+
+      font-size: 21px;
+    }
+
+    .cta-title {
+      color: var(--navy);
+
+      font-family: var(--font-display);
+
+      font-size: clamp(32px, 4vw, 46px);
+
+      line-height: 1.15;
+
+      margin-bottom: 14px;
+    }
+
+    .cta-text {
+      color: var(--text-light);
+
+      font-size: 15px;
+
+      margin-bottom: 25px;
+    }
+
+    .primary-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 9px;
+
+      padding: 14px 22px;
+
+      background: var(--primary);
+
+      color: var(--white);
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .primary-button:hover {
+      background: var(--primary-dark);
+
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 12px 25px rgba(24, 170, 157, 0.22);
+    }
+
+
+    /* =====================================================
+           FOOTER
+        ====================================================== */
+
+    .footer {
+      padding: 70px 0 25px;
+
+      background: var(--navy-dark);
+
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.5fr 1fr 1fr 1.15fr;
+
+      gap: 45px;
+
+      padding-bottom: 50px;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .footer-brand p {
+      max-width: 310px;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+
+      line-height: 1.8;
+
+      margin: 17px 0 20px;
+    }
+
+    .footer .logo-text {
+      color: var(--white);
+    }
+
+    .social-links {
+      display: flex;
+
+      gap: 8px;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 9px;
+
+      background: rgba(255, 255, 255, 0.07);
+
+      color: rgba(255, 255, 255, 0.72);
+
+      font-size: 13px;
+
+      transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--primary);
+
+      color: var(--white);
+
+      transform: translateY(-3px);
+    }
+
+    .footer-title {
+      color: var(--white);
+
+      font-size: 14px;
+
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 9px;
+
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.57);
+
+      font-size: 13px;
+
+      transition:
+        color var(--transition),
+        padding-left var(--transition);
+    }
+
+    .footer-links a:hover,
+    .footer-links a.active {
+      color: var(--primary);
+
+      padding-left: 4px;
+    }
+
+    .footer-contact {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      color: rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+    }
+
+    .contact-item i {
+      width: 18px;
+
+      color: var(--primary);
+
+      margin-top: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: rgba(255, 255, 255, 0.42);
+
+      font-size: 12px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+
+      gap: 18px;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+    .back-top {
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+
+      place-items: center;
+
+      background: var(--primary);
+
+      color: var(--white);
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 12px 30px rgba(24, 170, 157, 0.25);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform: translateY(15px);
+
+      transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition);
+
+      z-index: 900;
+    }
+
+    .back-top.show {
+      opacity: 1;
+
+      visibility: visible;
+
+      transform: translateY(0);
+    }
+
+    .back-top:hover {
+      background: var(--primary-dark);
+    }
+
+
+    /* =====================================================
+           REVEAL
+        ====================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform: translateY(25px);
+
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 1100px
+        ====================================================== */
+
+    @media (max-width: 1100px) {
+
+      .nav-menu {
+        gap: 19px;
+      }
+
+      .nav-cta {
+        padding: 11px 14px;
+      }
+
+      .gallery-grid {
+        grid-auto-rows: 220px;
+      }
+
+      .inspiration-grid {
+        gap: 45px;
+      }
+
+      .footer-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 900px
+        ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .nav {
+        min-height: 74px;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+
+        top: 74px;
+
+        left: 20px;
+        right: 20px;
+
+        padding: 22px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        background: var(--white);
+
+        border: 1px solid var(--border);
+
+        border-radius: 16px;
+
+        box-shadow: var(--shadow-lg);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-12px);
+
+        transition:
+          opacity 0.3s ease,
+          visibility 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      .nav-menu.open {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+      .nav-menu li {
+        width: 100%;
+      }
+
+      .nav-link {
+        display: block;
+
+        padding: 12px 10px;
+      }
+
+      .nav-cta {
+        width: 100%;
+
+        margin-top: 7px;
+      }
+
+      .gallery-hero {
+        min-height: 520px;
+
+        padding-top: 130px;
+      }
+
+      .gallery-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        grid-auto-rows: 230px;
+      }
+
+      .gallery-item:nth-child(n) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(8) {
+        grid-column: span 2;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-row: span 2;
+      }
+
+      .inspiration-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .inspiration-images {
+        max-width: 750px;
+      }
+
+      .lightbox-prev {
+        left: 10px;
+      }
+
+      .lightbox-next {
+        right: 10px;
+      }
+
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 700px
+        ====================================================== */
+
+    @media (max-width: 700px) {
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .gallery-hero {
+        min-height: 500px;
+
+        padding-top: 120px;
+
+        padding-bottom: 70px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 270px;
+
+        gap: 14px;
+      }
+
+      .gallery-item:nth-child(n) {
+        grid-column: span 1;
+
+        grid-row: span 1;
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-row: span 1;
+      }
+
+      .gallery-overlay {
+        opacity: 1;
+
+        padding: 20px;
+      }
+
+      .gallery-view {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      .inspiration {
+        padding: 75px 0;
+      }
+
+      .inspiration-images {
+        grid-template-columns: 1fr;
+      }
+
+      .inspiration-image,
+      .inspiration-image.large {
+        height: 300px;
+
+        grid-row: auto;
+      }
+
+      .cta-box {
+        padding: 45px 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+
+    /* =====================================================
+           RESPONSIVE — 500px
+        ====================================================== */
+
+    @media (max-width: 500px) {
+
+      .logo-text {
+        font-size: 18px;
+      }
+
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .hero-title {
+        font-size: 40px;
+
+        letter-spacing: -0.8px;
+      }
+
+      .gallery-filter {
+        justify-content: flex-start;
+      }
+
+      .filter-btn {
+        padding: 9px 13px;
+
+        font-size: 12px;
+      }
+
+      .gallery-grid {
+        grid-auto-rows: 235px;
+      }
+
+      .gallery-title {
+        font-size: 20px;
+      }
+
+      .lightbox {
+        padding: 18px;
+      }
+
+      .lightbox-image {
+        max-height: 70vh;
+      }
+
+      .lightbox-close {
+        top: -2px;
+        right: 0;
+      }
+
+      .lightbox-prev,
+      .lightbox-next {
+        width: 40px;
+        height: 40px;
+      }
+
+      .back-top {
+        right: 17px;
+
+        bottom: 17px;
+
+        width: 42px;
+
+        height: 42px;
+      }
+
+    }
+
+
+    /* =====================================================
+           REDUCED MOTION
+        ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+
+    <div class="loader"></div>
+
+  </div>
+
+
+  <!-- =====================================================
+         SKIP LINK
+    ====================================================== -->
+
+  <a href="#main-content" class="skip-link">
+
+    Skip to content
+
+  </a>
+
+
+  <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+  <header class="header" id="header">
+
+    <div class="container">
+
+      <nav class="nav" aria-label="Main navigation">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo" aria-label="Wanderly Travels Home">
+
+          <span class="logo-icon">
+            <i class="fa-solid fa-location-arrow"></i>
+          </span>
+
+          <span class="logo-text">
+            Wanderly<span>Travels</span>
+          </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <ul class="nav-menu" id="navMenu">
+
+          <li>
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="packages.html" class="nav-link">
+              Packages
+            </a>
+          </li>
+
+          <li>
+            <a href="destinations.html" class="nav-link">
+              Destinations
+            </a>
+          </li>
+
+          <li>
+            <a href="offers.html" class="nav-link">
+              Offers
+            </a>
+          </li>
+
+          <li>
+            <a href="our-story.html" class="nav-link">
+              Our Story
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="nav-link">
+              Contact
+            </a>
+          </li>
+
+          <li>
+            <a href="custom-trip.html" class="nav-cta">
+
+              Plan My Trip
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+          </li>
+
+        </ul>
+
+
+        <!-- MOBILE MENU -->
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="navMenu">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- =================================================
+             HERO
+        ================================================== -->
+
+    <section class="gallery-hero">
+
+      <div class="hero-decoration"></div>
+
+      <div class="container">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            Wanderly Moments
+          </div>
+
+          <h1 class="hero-title">
+            See the places.
+            <span>Feel the journey.</span>
+          </h1>
+
+          <p class="hero-description">
+            A collection of destinations, experiences
+            and little moments that make travelling
+            worth remembering. Get inspired for your
+            next adventure with Wanderly Travels.
+          </p>
+
+          <div class="breadcrumb">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+              Gallery
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             GALLERY
+        ================================================== -->
+
+    <section class="section section-soft">
+
+      <div class="container">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading reveal">
+
+          <div class="section-label">
+            Travel Inspiration
+          </div>
+
+          <h2 class="section-title">
+            Moments worth travelling for.
+          </h2>
+
+          <p class="section-text">
+            Browse through some of the places and
+            experiences that inspire our travellers.
+            Click any image to explore it in full view.
+          </p>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="gallery-filter reveal" role="group" aria-label="Gallery categories">
+
+          <button class="filter-btn active" type="button" data-filter="all">
+
+            All
+
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="beach">
+
+            Beaches
+
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="mountains">
+
+            Mountains
+
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="culture">
+
+            Culture
+
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="adventure">
+
+            Adventure
+
+          </button>
+
+          <button class="filter-btn" type="button" data-filter="city">
+
+            City Escapes
+
+          </button>
+
+        </div>
+
+
+        <!-- GALLERY GRID -->
+
+        <div class="gallery-grid" id="galleryGrid">
+
+
+          <!-- IMAGE 01 -->
+
+          <article class="gallery-item reveal" data-category="beach" data-title="Tropical Shores"
+            data-location="Maldives">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1400&q=85"
+              alt="Beautiful tropical beach with turquoise water" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Beaches
+              </span>
+
+              <h3 class="gallery-title">
+                Tropical Shores
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Maldives
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 02 -->
+
+          <article class="gallery-item reveal" data-category="mountains" data-title="Mountain Escape"
+            data-location="Himachal Pradesh">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85"
+              alt="Snow covered mountain landscape" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Mountains
+              </span>
+
+              <h3 class="gallery-title">
+                Mountain Escape
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Himachal Pradesh
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 03 -->
+
+          <article class="gallery-item reveal" data-category="culture" data-title="Golden Heritage"
+            data-location="Rajasthan">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=85"
+              alt="Historic Indian architecture in Rajasthan" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Culture
+              </span>
+
+              <h3 class="gallery-title">
+                Golden Heritage
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Rajasthan
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 04 -->
+
+          <article class="gallery-item reveal" data-category="adventure" data-title="Into the Wild"
+            data-location="Uttarakhand">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1200&q=85"
+              alt="Hiker exploring a mountain landscape" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Adventure
+              </span>
+
+              <h3 class="gallery-title">
+                Into the Wild
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Uttarakhand
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 05 -->
+
+          <article class="gallery-item reveal" data-category="city" data-title="City Lights" data-location="Singapore">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=1200&q=85"
+              alt="Modern Singapore skyline at night" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                City Escapes
+              </span>
+
+              <h3 class="gallery-title">
+                City Lights
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Singapore
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 06 -->
+
+          <article class="gallery-item reveal" data-category="beach" data-title="Island Calm" data-location="Goa">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85"
+              alt="Peaceful tropical beach in Goa" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Beaches
+              </span>
+
+              <h3 class="gallery-title">
+                Island Calm
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Goa
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 07 -->
+
+          <article class="gallery-item reveal" data-category="culture" data-title="Timeless Streets"
+            data-location="Jaipur">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1400&q=85"
+              alt="Colourful historic architecture in Jaipur" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Culture
+              </span>
+
+              <h3 class="gallery-title">
+                Timeless Streets
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Jaipur
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 08 -->
+
+          <article class="gallery-item reveal" data-category="mountains" data-title="Above the Clouds"
+            data-location="Ladakh">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?auto=format&fit=crop&w=1400&q=85"
+              alt="Mountain valley and dramatic sky" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Mountains
+              </span>
+
+              <h3 class="gallery-title">
+                Above the Clouds
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Ladakh
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 09 -->
+
+          <article class="gallery-item reveal" data-category="adventure" data-title="Wild Horizons"
+            data-location="New Zealand">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=1400&q=85"
+              alt="Scenic adventure landscape with mountains" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                Adventure
+              </span>
+
+              <h3 class="gallery-title">
+                Wild Horizons
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                New Zealand
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+
+          <!-- IMAGE 10 -->
+
+          <article class="gallery-item reveal" data-category="city" data-title="Urban Stories" data-location="Dubai">
+
+            <img class="gallery-image"
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85"
+              alt="Dubai city skyline" loading="lazy">
+
+            <div class="gallery-overlay">
+
+              <span class="gallery-category">
+                City Escapes
+              </span>
+
+              <h3 class="gallery-title">
+                Urban Stories
+              </h3>
+
+              <span class="gallery-location">
+                <i class="fa-solid fa-location-dot"></i>
+                Dubai
+              </span>
+
+            </div>
+
+            <span class="gallery-view" aria-hidden="true">
+
+              <i class="fa-solid fa-expand"></i>
+
+            </span>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             INSPIRATION
+        ================================================== -->
+
+    <section class="inspiration">
+
+      <div class="container">
+
+        <div class="inspiration-grid">
+
+
+          <div class="inspiration-content reveal">
+
+            <div class="section-label">
+              Your Next Chapter
+            </div>
+
+            <h2 class="section-title">
+              The best view is the one you haven't seen yet.
+            </h2>
+
+            <p class="section-text">
+              Your next unforgettable moment could be
+              closer than you think. Tell us what kind
+              of journey you imagine, and we'll help
+              turn the idea into a real itinerary.
+            </p>
+
+
+            <div class="inspiration-points">
+
+              <div class="inspiration-point">
+
+                <div class="inspiration-point-icon">
+                  <i class="fa-solid fa-compass"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Discover
+                  </h4>
+
+                  <p>
+                    Find destinations that match
+                    your travel style.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="inspiration-point">
+
+                <div class="inspiration-point-icon">
+                  <i class="fa-solid fa-route"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Plan
+                  </h4>
+
+                  <p>
+                    Build an itinerary around
+                    your interests and pace.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="inspiration-point">
+
+                <div class="inspiration-point-icon">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+
+                <div>
+
+                  <h4>
+                    Remember
+                  </h4>
+
+                  <p>
+                    Come home with stories worth
+                    sharing.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="inspiration-images reveal">
+
+            <div class="inspiration-image large">
+
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                alt="Beautiful mountain lake landscape" loading="lazy">
+
+            </div>
+
+            <div class="inspiration-image">
+
+              <img src="https://images.unsplash.com/photo-1493552152660-f915ab47ae9d?auto=format&fit=crop&w=800&q=85"
+                alt="Tropical travel destination" loading="lazy">
+
+            </div>
+
+            <div class="inspiration-image">
+
+              <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=85"
+                alt="Indian heritage monument" loading="lazy">
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =================================================
+             CTA
+        ================================================== -->
+
+    <section class="gallery-cta">
+
+      <div class="container">
+
+        <div class="cta-box reveal">
+
+          <div class="cta-content">
+
+            <div class="cta-icon">
+
+              <i class="fa-solid fa-paper-plane"></i>
+
+            </div>
+
+            <h2 class="cta-title">
+              Ready to create your own travel story?
+            </h2>
+
+            <p class="cta-text">
+              Tell Wanderly Travels where you want to go,
+              and we'll help you plan a journey worth
+              remembering.
+            </p>
+
+            <a href="custom-trip.html" class="primary-button">
+
+              Plan My Trip
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+
+    <div class="lightbox-content">
+
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image viewer">
+
+        <i class="fa-solid fa-xmark"></i>
+
+      </button>
+
+
+      <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">
+
+        <i class="fa-solid fa-chevron-left"></i>
+
+      </button>
+
+
+      <img class="lightbox-image" id="lightboxImage" src="" alt="">
+
+
+      <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Next image">
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+      </button>
+
+
+      <div class="lightbox-caption" id="lightboxCaption">
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo" aria-label="Wanderly Travels Home">
+
+            <span class="logo-icon">
+              <i class="fa-solid fa-location-arrow"></i>
+            </span>
+
+            <span class="logo-text">
+              Wanderly<span>Travels</span>
+            </span>
+
+          </a>
+
+          <p>
+            See More. Feel More.
+            Thoughtfully planned journeys,
+            meaningful experiences and memories
+            worth bringing home.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" class="social-link" aria-label="Instagram">
+
+              <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+            <a href="#" class="social-link" aria-label="Facebook">
+
+              <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+            <a href="#" class="social-link" aria-label="YouTube">
+
+              <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+            <a href="#" class="social-link" aria-label="WhatsApp">
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Explore
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="packages.html">
+                Packages
+              </a>
+            </li>
+
+            <li>
+              <a href="destinations.html">
+                Destinations
+              </a>
+            </li>
+
+            <li>
+              <a href="offers.html">
+                Offers
+              </a>
+            </li>
+
+            <li>
+              <a href="gallery.html" class="active" aria-current="page">
+                Gallery
+              </a>
+            </li>
+
+            <li>
+              <a href="custom-trip.html">
+                Custom Trip
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Company
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="our-story.html">
+                Our Story
+              </a>
+            </li>
+
+            <li>
+              <a href="reviews.html">
+                Reviews
+              </a>
+            </li>
+
+            <li>
+              <a href="faq.html">
+                FAQ
+              </a>
+            </li>
+
+            <li>
+              <a href="privacy.html">
+                Privacy Policy
+              </a>
+            </li>
+
+            <li>
+              <a href="terms.html">
+                Terms & Conditions
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Contact
+          </h3>
+
+          <div class="footer-contact">
+
+            <div class="contact-item">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <span>
+                hello@wanderlytravels.com
+              </span>
+
+            </div>
+
+            <div class="contact-item">
+
+              <i class="fa-solid fa-phone"></i>
+
+              <span>
+                +91 98765 43210
+              </span>
+
+            </div>
+
+            <div class="contact-item">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <span>
+                India
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span>
+          Wanderly Travels. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+          <a href="privacy.html">
+            Privacy
+          </a>
+
+          <a href="terms.html">
+            Terms
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =====================================================
+         COMBINED JAVASCRIPT
+    ====================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+
+      /* =================================================
+         ELEMENTS
+      ================================================== */
+
+      const preloader =
+        document.getElementById("preloader");
+
+      const header =
+        document.getElementById("header");
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const navMenu =
+        document.getElementById("navMenu");
+
+      const backTop =
+        document.getElementById("backTop");
+
+      const currentYear =
+        document.getElementById("currentYear");
+
+      const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+      const galleryItems =
+        Array.from(
+          document.querySelectorAll(".gallery-item")
+        );
+
+      const lightbox =
+        document.getElementById("lightbox");
+
+      const lightboxImage =
+        document.getElementById("lightboxImage");
+
+      const lightboxCaption =
+        document.getElementById("lightboxCaption");
+
+      const lightboxClose =
+        document.getElementById("lightboxClose");
+
+      const lightboxPrev =
+        document.getElementById("lightboxPrev");
+
+      const lightboxNext =
+        document.getElementById("lightboxNext");
+
+
+      let currentImageIndex = 0;
+
+      let visibleItems = [...galleryItems];
+
+
+      /* =================================================
+         PRELOADER
+      ================================================== */
+
+      const hidePreloader = () => {
+
+        if (!preloader) return;
+
+        preloader.classList.add("hide");
+
+      };
+
+      window.addEventListener(
+        "load",
+        hidePreloader
+      );
+
+      setTimeout(
+        hidePreloader,
+        1800
+      );
+
+
+      /* =================================================
+         CURRENT YEAR
+      ================================================== */
+
+      if (currentYear) {
+
+        currentYear.textContent =
+          new Date().getFullYear();
+
+      }
+
+
+      /* =================================================
+         MOBILE NAVIGATION
+      ================================================== */
+
+      const closeMenu = () => {
+
+        if (!navMenu || !menuToggle) {
+          return;
+        }
+
+        navMenu.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
+        const icon =
+          menuToggle.querySelector("i");
+
+        if (icon) {
+
+          icon.classList.remove(
+            "fa-xmark"
+          );
+
+          icon.classList.add(
+            "fa-bars"
+          );
+
+        }
+
+        document.body.classList.remove(
+          "menu-open"
+        );
+
+      };
+
+
+      const openMenu = () => {
+
+        if (!navMenu || !menuToggle) {
+          return;
+        }
+
+        navMenu.classList.add("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+        menuToggle.setAttribute(
+          "aria-label",
+          "Close navigation menu"
+        );
+
+        const icon =
+          menuToggle.querySelector("i");
+
+        if (icon) {
+
+          icon.classList.remove(
+            "fa-bars"
+          );
+
+          icon.classList.add(
+            "fa-xmark"
+          );
+
+        }
+
+        document.body.classList.add(
+          "menu-open"
+        );
+
+      };
+
+
+      if (menuToggle) {
+
+        menuToggle.addEventListener(
+          "click",
+          () => {
+
+            const isOpen =
+              navMenu.classList.contains(
+                "open"
+              );
+
+            if (isOpen) {
+
+              closeMenu();
+
+            } else {
+
+              openMenu();
+
+            }
+
+          }
+        );
+
+      }
+
+
+      document
+        .querySelectorAll(".nav-menu a")
+        .forEach(link => {
+
+          link.addEventListener(
+            "click",
+            closeMenu
+          );
+
+        });
+
+
+      document.addEventListener(
+        "click",
+        event => {
+
+          if (!navMenu ||
+            !menuToggle) {
+            return;
+          }
+
+          if (
+            navMenu.classList.contains("open") &&
+            !navMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+          ) {
+
+            closeMenu();
+
+          }
+
+        }
+      );
+
+
+      document.addEventListener(
+        "keydown",
+        event => {
+
+          if (event.key === "Escape") {
+
+            closeMenu();
+
+          }
+
+        }
+      );
+
+
+      window.addEventListener(
+        "resize",
+        () => {
+
+          if (window.innerWidth > 900) {
+
+            closeMenu();
+
+          }
+
+        }
+      );
+
+
+      /* =================================================
+         HEADER SCROLL
+      ================================================== */
+
+      const updateHeader = () => {
+
+        if (!header) return;
+
+        if (window.scrollY > 40) {
+
+          header.classList.add(
+            "scrolled"
+          );
+
+        } else {
+
+          header.classList.remove(
+            "scrolled"
+          );
+
+        }
+
+      };
+
+      window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive: true }
+      );
+
+      updateHeader();
+
+
+      /* =================================================
+         REVEAL ANIMATION
+      ================================================== */
+
+      const revealElements =
+        document.querySelectorAll(
+          ".reveal"
+        );
+
+      if (
+        "IntersectionObserver"
+        in window
+      ) {
+
+        const revealObserver =
+          new IntersectionObserver(
+            entries => {
+
+              entries.forEach(
+                entry => {
+
+                  if (
+                    entry.isIntersecting
+                  ) {
+
+                    entry.target.classList.add(
+                      "visible"
+                    );
+
+                    revealObserver.unobserve(
+                      entry.target
+                    );
+
+                  }
+
+                }
+              );
+
+            },
+            {
+              threshold: 0.12,
+              rootMargin:
+                "0px 0px -40px 0px"
+            }
+          );
+
+        revealElements.forEach(
+          element => {
+
+            revealObserver.observe(
+              element
+            );
+
+          }
+        );
+
+      } else {
+
+        revealElements.forEach(
+          element => {
+
+            element.classList.add(
+              "visible"
+            );
+
+          }
+        );
+
+      }
+
+
+      /* =================================================
+         GALLERY FILTER
+      ================================================== */
+
+      const updateVisibleItems = () => {
+
+        visibleItems =
+          galleryItems.filter(
+            item =>
+              !item.classList.contains(
+                "hidden"
+              )
+          );
+
+      };
+
+
+      filterButtons.forEach(button => {
+
+        button.addEventListener(
+          "click",
+          () => {
+
+            filterButtons.forEach(
+              btn => {
+
+                btn.classList.remove(
+                  "active"
+                );
+
+              }
+            );
+
+            button.classList.add(
+              "active"
+            );
+
+            const filter =
+              button.dataset.filter;
+
+            galleryItems.forEach(
+              item => {
+
+                const category =
+                  item.dataset.category;
+
+                if (
+                  filter === "all" ||
+                  category === filter
+                ) {
+
+                  item.classList.remove(
+                    "hidden"
+                  );
+
+                } else {
+
+                  item.classList.add(
+                    "hidden"
+                  );
+
+                }
+
+              }
+            );
+
+            updateVisibleItems();
+
+          }
+        );
+
+      });
+
+
+      /* =================================================
+         LIGHTBOX
+      ================================================== */
+
+      const openLightbox = item => {
+
+        if (!item) return;
+
+        const image =
+          item.querySelector(
+            ".gallery-image"
+          );
+
+        if (!image) return;
+
+        currentImageIndex =
+          visibleItems.indexOf(item);
+
+        if (currentImageIndex < 0) {
+
+          currentImageIndex = 0;
+
+        }
+
+        showLightboxImage(
+          currentImageIndex
+        );
+
+        lightbox.classList.add(
+          "open"
+        );
+
+        document.body.classList.add(
+          "menu-open"
+        );
+
+        lightboxClose.focus();
+
+      };
+
+
+      const showLightboxImage = index => {
+
+        if (
+          !visibleItems.length ||
+          !lightboxImage
+        ) {
+          return;
+        }
+
+        if (index < 0) {
+
+          index =
+            visibleItems.length - 1;
+
+        }
+
+        if (
+          index >= visibleItems.length
+        ) {
+
+          index = 0;
+
+        }
+
+        currentImageIndex = index;
+
+        const item =
+          visibleItems[
+          currentImageIndex
+          ];
+
+        const image =
+          item.querySelector(
+            ".gallery-image"
+          );
+
+        const title =
+          item.dataset.title || "";
+
+        const location =
+          item.dataset.location || "";
+
+        if (!image) return;
+
+        lightboxImage.src =
+          image.src;
+
+        lightboxImage.alt =
+          image.alt;
+
+        lightboxCaption.innerHTML = `
+                    <strong>${title}</strong>
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        ${location}
+                    </span>
+                `;
+
+      };
+
+
+      const closeLightbox = () => {
+
+        lightbox.classList.remove(
+          "open"
+        );
+
+        document.body.classList.remove(
+          "menu-open"
+        );
+
+        if (lightboxImage) {
+
+          lightboxImage.src = "";
+
+        }
+
+      };
+
+
+      galleryItems.forEach(item => {
+
+        item.addEventListener(
+          "click",
+          () => {
+
+            if (
+              item.classList.contains(
+                "hidden"
+              )
+            ) {
+              return;
+            }
+
+            openLightbox(item);
+
+          }
+        );
+
+      });
+
+
+      if (lightboxClose) {
+
+        lightboxClose.addEventListener(
+          "click",
+          closeLightbox
+        );
+
+      }
+
+
+      if (lightboxPrev) {
+
+        lightboxPrev.addEventListener(
+          "click",
+          event => {
+
+            event.stopPropagation();
+
+            showLightboxImage(
+              currentImageIndex - 1
+            );
+
+          }
+        );
+
+      }
+
+
+      if (lightboxNext) {
+
+        lightboxNext.addEventListener(
+          "click",
+          event => {
+
+            event.stopPropagation();
+
+            showLightboxImage(
+              currentImageIndex + 1
+            );
+
+          }
+        );
+
+      }
+
+
+      /* Close by clicking background */
+
+      if (lightbox) {
+
+        lightbox.addEventListener(
+          "click",
+          event => {
+
+            if (
+              event.target === lightbox
+            ) {
+
+              closeLightbox();
+
+            }
+
+          }
+        );
+
+      }
+
+
+      /* =================================================
+         LIGHTBOX KEYBOARD CONTROLS
+      ================================================== */
+
+      document.addEventListener(
+        "keydown",
+        event => {
+
+          if (
+            !lightbox.classList.contains(
+              "open"
+            )
+          ) {
+            return;
+          }
+
+          if (
+            event.key === "Escape"
+          ) {
+
+            closeLightbox();
+
+          }
+
+          if (
+            event.key === "ArrowLeft"
+          ) {
+
+            showLightboxImage(
+              currentImageIndex - 1
+            );
+
+          }
+
+          if (
+            event.key === "ArrowRight"
+          ) {
+
+            showLightboxImage(
+              currentImageIndex + 1
+            );
+
+          }
+
+        }
+      );
+
+
+      /* =================================================
+         BACK TO TOP
+      ================================================== */
+
+      const updateBackTop = () => {
+
+        if (!backTop) return;
+
+        if (window.scrollY > 600) {
+
+          backTop.classList.add(
+            "show"
+          );
+
+        } else {
+
+          backTop.classList.remove(
+            "show"
+          );
+
+        }
+
+      };
+
+      window.addEventListener(
+        "scroll",
+        updateBackTop,
+        { passive: true }
+      );
+
+      updateBackTop();
+
+
+      if (backTop) {
+
+        backTop.addEventListener(
+          "click",
+          () => {
+
+            window.scrollTo({
+
+              top: 0,
+
+              behavior:
+                window.matchMedia(
+                  "(prefers-reduced-motion: reduce)"
+                ).matches
+                  ? "auto"
+                  : "smooth"
+
+            });
+
+          }
+        );
+
+      }
+
+
+      /* =================================================
+         IMAGE FALLBACK
+      ================================================== */
+
+      document
+        .querySelectorAll("img")
+        .forEach(img => {
+
+          img.addEventListener(
+            "error",
+            () => {
+
+              img.src =
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80";
+
+            },
+            { once: true }
+          );
+
+        });
+
+
+      /* =================================================
+         INITIAL VISIBLE ITEMS
+      ================================================== */
+
+      updateVisibleItems();
+
+
+      /* =================================================
+         CONSOLE MESSAGE
+      ================================================== */
+
+      console.log(
+        "%cWanderly Travels Gallery loaded successfully.",
+        "color:#18aa9d;font-weight:700;"
+      );
+
+    });
+
+  </script>
+
+</body>
+
+</html>

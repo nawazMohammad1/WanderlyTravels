@@ -1,0 +1,4261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Terms & Conditions | Wanderly Travels</title>
+
+  <meta name="description"
+    content="Read the Terms and Conditions of Wanderly Travels covering travel packages, enquiries, bookings, payments, cancellations, changes and travel services.">
+
+  <meta name="keywords"
+    content="Wanderly Travels terms and conditions, travel booking terms, travel agency terms, travel packages terms">
+
+  <meta name="author" content="Wanderly Travels">
+
+  <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+  <!-- =========================================================
+         COMBINED CSS
+    ========================================================== -->
+
+  <style>
+    /* =========================================================
+           WANDERLY TRAVELS
+           TERMS & CONDITIONS
+        ========================================================== */
+
+    :root {
+
+      --primary: #18aa9d;
+      --primary-dark: #108d82;
+      --primary-light: #dff6f3;
+
+      --navy: #102536;
+      --navy-dark: #071624;
+      --navy-soft: #193547;
+
+      --white: #ffffff;
+      --off-white: #f8fbfa;
+      --cream: #f5f8f7;
+
+      --text: #24343d;
+      --text-light: #64747c;
+      --muted: #87959b;
+
+      --border: #e5eceb;
+
+      --gold: #dcae58;
+      --gold-light: #f8edda;
+
+      --shadow-sm:
+        0 8px 25px rgba(7, 22, 36, 0.06);
+
+      --shadow-md:
+        0 18px 45px rgba(7, 22, 36, 0.10);
+
+      --shadow-lg:
+        0 30px 70px rgba(7, 22, 36, 0.16);
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+
+      --transition: 0.35s ease;
+
+      --font-body: "DM Sans", sans-serif;
+      --font-display: "Playfair Display", Georgia, serif;
+    }
+
+
+    /* =========================================================
+           RESET
+        ========================================================== */
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ::selection {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+
+    /* =========================================================
+           CONTAINER
+        ========================================================== */
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+
+    /* =========================================================
+           SKIP LINK
+        ========================================================== */
+
+    .skip-link {
+      position: fixed;
+
+      top: -100px;
+      left: 20px;
+
+      z-index: 99999;
+
+      padding: 12px 18px;
+
+      background: var(--navy);
+      color: var(--white);
+
+      border-radius: 8px;
+
+      transition: top 0.3s ease;
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+
+    /* =========================================================
+           PRELOADER
+        ========================================================== */
+
+    .preloader {
+      position: fixed;
+      inset: 0;
+
+      z-index: 9999;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--navy-dark);
+
+      transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+    }
+
+    .preloader.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .loader-icon {
+      width: 58px;
+      height: 58px;
+
+      margin: 0 auto 18px;
+
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-top-color: var(--primary);
+
+      border-radius: 50%;
+
+      animation: spin 1s linear infinite;
+    }
+
+    .loader p {
+      font-size: 13px;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    @keyframes spin {
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+
+    /* =========================================================
+           HEADER
+        ========================================================== */
+
+    .header {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      z-index: 1000;
+
+      background: rgba(7, 22, 36, 0.35);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        backdrop-filter 0.35s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(7, 22, 36, 0.96);
+
+      box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.12);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      width: min(100% - 64px, 1320px);
+
+      min-height: 82px;
+
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    /* =========================================================
+           LOGO
+        ========================================================== */
+
+    .logo {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      color: var(--white);
+      background: var(--primary);
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 8px 20px rgba(24, 170, 157, 0.25);
+
+      transition:
+        transform var(--transition);
+    }
+
+    .logo:hover .logo-icon {
+      transform:
+        rotate(-7deg) translateY(-2px);
+    }
+
+    .logo-icon i {
+      font-size: 18px;
+    }
+
+    .logo-text {
+      color: var(--white);
+
+      font-size: 18px;
+      font-weight: 700;
+
+      letter-spacing: -0.3px;
+    }
+
+    .logo-text span {
+      color: var(--primary);
+    }
+
+
+    /* =========================================================
+           DESKTOP NAV
+        ========================================================== */
+
+    .nav-menu {
+      display: flex;
+
+      align-items: center;
+
+      gap: 5px;
+    }
+
+    .nav-link {
+      position: relative;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      padding: 10px 14px;
+
+      color:
+        rgba(255, 255, 255, 0.82);
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition:
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .nav-link::after {
+      content: "";
+
+      position: absolute;
+
+      left: 14px;
+      right: 14px;
+      bottom: 4px;
+
+      height: 2px;
+
+      background: var(--primary);
+
+      transform:
+        scaleX(0);
+
+      transform-origin: center;
+
+      transition:
+        transform var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--white);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      transform:
+        scaleX(1);
+    }
+
+    .nav-cta {
+      margin-left: 8px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding: 12px 18px;
+
+      background: var(--primary);
+
+      color: var(--white);
+
+      border-radius: 10px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition:
+        background var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark);
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 10px 25px rgba(24, 170, 157, 0.25);
+    }
+
+
+    /* =========================================================
+           MOBILE MENU
+        ========================================================== */
+
+    .menu-toggle {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      align-items: center;
+      justify-content: center;
+
+      color: var(--white);
+
+      background:
+        rgba(255, 255, 255, 0.08);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+      border-radius: 10px;
+
+      font-size: 18px;
+    }
+
+    .menu-close {
+      display: none;
+    }
+
+    .menu-overlay {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 998;
+
+      background:
+        rgba(7, 22, 36, 0.65);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+    .menu-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    /* =========================================================
+           HERO
+        ========================================================== */
+
+    .terms-hero {
+      position: relative;
+
+      min-height: 570px;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding:
+        150px 0 85px;
+
+      color: var(--white);
+
+      background:
+        linear-gradient(180deg,
+          rgba(7, 22, 36, 0.35) 0%,
+          rgba(7, 22, 36, 0.84) 100%),
+        url("https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=2200&q=85") center / cover no-repeat;
+    }
+
+    .terms-hero::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        radial-gradient(circle at 75% 30%,
+          rgba(24, 170, 157, 0.18),
+          transparent 35%);
+    }
+
+    .hero-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 850px;
+    }
+
+    .hero-eyebrow,
+    .section-eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--primary);
+
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .hero-eyebrow {
+      color: #8de3da;
+
+      margin-bottom: 18px;
+    }
+
+    .hero-eyebrow i {
+      font-size: 12px;
+    }
+
+    .hero-title {
+      max-width: 850px;
+
+      font-family: var(--font-display);
+
+      font-size:
+        clamp(42px, 6vw, 76px);
+
+      font-weight: 600;
+
+      line-height: 1.06;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 22px;
+    }
+
+    .hero-title span {
+      color: #8de3da;
+    }
+
+    .hero-description {
+      max-width: 700px;
+
+      color:
+        rgba(255, 255, 255, 0.78);
+
+      font-size: 17px;
+
+      line-height: 1.8;
+    }
+
+    .breadcrumb {
+      display: flex;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-top: 28px;
+
+      color:
+        rgba(255, 255, 255, 0.58);
+
+      font-size: 13px;
+    }
+
+    .breadcrumb a {
+      color:
+        rgba(255, 255, 255, 0.78);
+
+      transition:
+        color var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--primary);
+    }
+
+    .breadcrumb i {
+      font-size: 9px;
+    }
+
+
+    /* =========================================================
+           COMMON SECTION
+        ========================================================== */
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+
+      margin-bottom: 50px;
+    }
+
+    .section-title {
+      margin-top: 13px;
+
+      font-family: var(--font-display);
+
+      font-size:
+        clamp(34px, 4vw, 52px);
+
+      font-weight: 600;
+
+      line-height: 1.15;
+
+      color: var(--navy);
+
+      letter-spacing: -1px;
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-description {
+      max-width: 680px;
+
+      margin-top: 18px;
+
+      color: var(--text-light);
+
+      font-size: 16px;
+
+      line-height: 1.85;
+    }
+
+
+    /* =========================================================
+           TERMS LAYOUT
+        ========================================================== */
+
+    .terms-layout {
+      display: grid;
+
+      grid-template-columns:
+        260px minmax(0, 1fr);
+
+      gap: 60px;
+
+      align-items: start;
+    }
+
+
+    /* =========================================================
+           SIDEBAR
+        ========================================================== */
+
+    .terms-sidebar {
+      position: sticky;
+
+      top: 110px;
+
+      padding: 25px;
+
+      background: var(--off-white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius-md);
+    }
+
+    .terms-sidebar-title {
+      margin-bottom: 16px;
+
+      color: var(--navy);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+    .terms-nav {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 3px;
+    }
+
+    .terms-nav a {
+      position: relative;
+
+      padding: 10px 12px;
+
+      color: var(--text-light);
+
+      border-radius: 8px;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition:
+        color var(--transition),
+        background var(--transition),
+        padding-left var(--transition);
+    }
+
+    .terms-nav a:hover,
+    .terms-nav a.active {
+      color: var(--primary-dark);
+
+      background: var(--primary-light);
+
+      padding-left: 16px;
+    }
+
+
+    /* =========================================================
+           TERMS CONTENT
+        ========================================================== */
+
+    .terms-content {
+      min-width: 0;
+    }
+
+    .terms-intro {
+      padding: 28px 30px;
+
+      margin-bottom: 35px;
+
+      background: var(--primary-light);
+
+      border-left:
+        4px solid var(--primary);
+
+      border-radius:
+        0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .terms-intro strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--navy);
+
+      font-size: 17px;
+    }
+
+    .terms-intro p {
+      color: var(--text-light);
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+           TERMS SECTION
+        ========================================================== */
+
+    .terms-section {
+      scroll-margin-top: 110px;
+
+      padding-bottom: 42px;
+
+      margin-bottom: 42px;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+    .terms-section:last-child {
+      padding-bottom: 0;
+
+      margin-bottom: 0;
+
+      border-bottom: 0;
+    }
+
+    .terms-section h2 {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 14px;
+
+      margin-bottom: 17px;
+
+      color: var(--navy);
+
+      font-family: var(--font-display);
+
+      font-size:
+        clamp(25px, 3vw, 33px);
+
+      font-weight: 600;
+
+      line-height: 1.25;
+    }
+
+    .terms-section h2 .number {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      width: 38px;
+      height: 38px;
+
+      margin-top: 2px;
+
+      color: var(--primary-dark);
+
+      background: var(--primary-light);
+
+      border-radius: 10px;
+
+      font-family: var(--font-body);
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    .terms-section p {
+      margin-bottom: 15px;
+
+      color: var(--text-light);
+
+      font-size: 15px;
+
+      line-height: 1.9;
+    }
+
+    .terms-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .terms-section ul {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+
+      margin: 18px 0;
+    }
+
+    .terms-section li {
+      position: relative;
+
+      padding-left: 26px;
+
+      color: var(--text-light);
+
+      font-size: 15px;
+
+      line-height: 1.8;
+    }
+
+    .terms-section li::before {
+      content: "";
+
+      position: absolute;
+
+      left: 4px;
+      top: 10px;
+
+      width: 7px;
+      height: 7px;
+
+      background: var(--primary);
+
+      border-radius: 50%;
+    }
+
+    .terms-section strong {
+      color: var(--navy);
+    }
+
+    .terms-section a {
+      color: var(--primary-dark);
+
+      font-weight: 600;
+
+      transition:
+        color var(--transition);
+    }
+
+    .terms-section a:hover {
+      color: var(--navy);
+    }
+
+    .last-updated {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      margin-top: 5px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+           IMPORTANT NOTICE
+        ========================================================== */
+
+    .terms-notice {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 15px;
+
+      padding: 22px 24px;
+
+      margin: 20px 0 25px;
+
+      background: var(--gold-light);
+
+      border:
+        1px solid rgba(220, 174, 88, 0.25);
+
+      border-radius: var(--radius-md);
+    }
+
+    .terms-notice-icon {
+      width: 38px;
+      height: 38px;
+
+      flex-shrink: 0;
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--gold);
+
+      background: var(--white);
+
+      border-radius: 10px;
+    }
+
+    .terms-notice-content strong {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: var(--navy);
+
+      font-size: 14px;
+    }
+
+    .terms-notice-content p {
+      margin: 0;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+           CTA
+        ========================================================== */
+
+    .terms-cta {
+      margin-top: 70px;
+
+      padding: 60px 50px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      background: var(--navy);
+
+      border-radius: var(--radius-lg);
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    .terms-cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 320px;
+      height: 320px;
+
+      right: -100px;
+      top: -130px;
+
+      background:
+        rgba(24, 170, 157, 0.15);
+
+      border-radius: 50%;
+    }
+
+    .terms-cta-content {
+      position: relative;
+
+      z-index: 1;
+    }
+
+    .terms-cta h2 {
+      color: var(--white);
+
+      font-family: var(--font-display);
+
+      font-size:
+        clamp(28px, 4vw, 42px);
+
+      line-height: 1.2;
+
+      margin-bottom: 10px;
+    }
+
+    .terms-cta p {
+      max-width: 600px;
+
+      color:
+        rgba(255, 255, 255, 0.67);
+
+      font-size: 15px;
+    }
+
+
+    /* =========================================================
+           BUTTONS
+        ========================================================== */
+
+    .btn {
+      position: relative;
+
+      z-index: 2;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      min-height: 50px;
+
+      padding: 13px 21px;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 12px 28px rgba(24, 170, 157, 0.25);
+    }
+
+
+    /* =========================================================
+           IMAGE BREAK
+        ========================================================== */
+
+    .image-break {
+      position: relative;
+
+      min-height: 500px;
+
+      display: flex;
+
+      align-items: center;
+
+      color: var(--white);
+
+      background:
+        linear-gradient(90deg,
+          rgba(7, 22, 36, 0.88),
+          rgba(7, 22, 36, 0.45)),
+        url("https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=2200&q=85") center / cover no-repeat;
+    }
+
+    .image-break-content {
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 750px;
+    }
+
+    .image-break-content h2 {
+      margin: 15px 0 18px;
+
+      font-family: var(--font-display);
+
+      font-size:
+        clamp(38px, 5vw, 65px);
+
+      font-weight: 600;
+
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+    }
+
+    .image-break-content h2 span {
+      color: #8de3da;
+    }
+
+    .image-break-content p {
+      max-width: 650px;
+
+      color:
+        rgba(255, 255, 255, 0.75);
+
+      font-size: 16px;
+
+      line-height: 1.85;
+    }
+
+    .image-break-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 13px;
+
+      margin-top: 30px;
+    }
+
+    .custom-primary-btn,
+    .custom-secondary-btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      min-height: 50px;
+
+      padding: 13px 20px;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+    }
+
+    .custom-primary-btn {
+      background: var(--primary);
+
+      color: var(--white);
+    }
+
+    .custom-primary-btn:hover {
+      background: var(--primary-dark);
+
+      transform:
+        translateY(-3px);
+    }
+
+    .custom-secondary-btn {
+      color: var(--white);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.3);
+
+      background:
+        rgba(255, 255, 255, 0.07);
+    }
+
+    .custom-secondary-btn:hover {
+      background:
+        rgba(255, 255, 255, 0.15);
+
+      border-color:
+        rgba(255, 255, 255, 0.55);
+
+      transform:
+        translateY(-3px);
+    }
+
+
+    /* =========================================================
+           FOOTER
+        ========================================================== */
+
+    .footer {
+      padding: 80px 0 25px;
+
+      color:
+        rgba(255, 255, 255, 0.7);
+
+      background: var(--navy-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.5fr 1fr 1fr 1.1fr;
+
+      gap: 50px;
+
+      padding-bottom: 55px;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 20px;
+    }
+
+    .footer-description {
+      max-width: 340px;
+
+      color:
+        rgba(255, 255, 255, 0.55);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+
+      gap: 9px;
+
+      margin-top: 23px;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+
+      place-items: center;
+
+      color:
+        rgba(255, 255, 255, 0.7);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.13);
+
+      border-radius: 9px;
+
+      transition:
+        color var(--transition),
+        background var(--transition),
+        transform var(--transition);
+    }
+
+    .social-link:hover {
+      color: var(--white);
+
+      background: var(--primary);
+
+      transform:
+        translateY(-3px);
+    }
+
+    .footer-title {
+      margin-bottom: 18px;
+
+      color: var(--white);
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+    }
+
+    .footer-links a {
+      width: fit-content;
+
+      color:
+        rgba(255, 255, 255, 0.55);
+
+      font-size: 13px;
+
+      transition:
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+
+      transform:
+        translateX(3px);
+    }
+
+    .footer-contact {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 13px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      color:
+        rgba(255, 255, 255, 0.55);
+
+      font-size: 13px;
+    }
+
+    .footer-contact-item i {
+      width: 18px;
+
+      flex-shrink: 0;
+
+      margin-top: 4px;
+
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      font-size: 12px;
+    }
+
+    .footer-bottom p {
+      color:
+        rgba(255, 255, 255, 0.42);
+    }
+
+    .footer-legal {
+      display: flex;
+
+      gap: 18px;
+    }
+
+    .footer-legal a {
+      color:
+        rgba(255, 255, 255, 0.48);
+
+      transition:
+        color var(--transition);
+    }
+
+    .footer-legal a:hover,
+    .footer-legal a.active {
+      color: var(--primary);
+    }
+
+
+    /* =========================================================
+           BACK TO TOP
+        ========================================================== */
+
+    .back-to-top {
+      position: fixed;
+
+      right: 25px;
+      bottom: 25px;
+
+      z-index: 900;
+
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--white);
+
+      background: var(--primary);
+
+      border-radius: 12px;
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform:
+        translateY(15px);
+
+      box-shadow:
+        0 10px 25px rgba(24, 170, 157, 0.25);
+
+      transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition),
+        background var(--transition);
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+
+      visibility: visible;
+
+      transform:
+        translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+
+      transform:
+        translateY(-3px);
+    }
+
+
+    /* =========================================================
+           REVEAL
+        ========================================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(25px);
+
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================================================
+           FOCUS
+        ========================================================== */
+
+    a:focus-visible,
+    button:focus-visible {
+      outline:
+        3px solid rgba(24, 170, 157, 0.35);
+
+      outline-offset: 3px;
+    }
+
+
+    /* =========================================================
+           RESPONSIVE - 1100
+        ========================================================== */
+
+    @media (max-width: 1100px) {
+
+      .container {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      .nav {
+        width:
+          min(100% - 56px, 1320px);
+      }
+
+      .nav-menu {
+        gap: 0;
+      }
+
+      .nav-link {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .nav-link::after {
+        left: 10px;
+        right: 10px;
+      }
+
+      .terms-layout {
+        grid-template-columns:
+          230px minmax(0, 1fr);
+
+        gap: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns:
+          1.3fr 1fr 1fr;
+      }
+
+      .footer-contact-column {
+        grid-column: 2 / 4;
+      }
+
+    }
+
+
+    /* =========================================================
+           RESPONSIVE - 900
+        ========================================================== */
+
+    @media (max-width: 900px) {
+
+      .container {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      .nav {
+        width:
+          calc(100% - 50px);
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width:
+          min(360px, 88vw);
+
+        height: 100vh;
+
+        padding:
+          105px 28px 35px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+        background: var(--navy-dark);
+
+        box-shadow:
+          -15px 0 45px rgba(0, 0, 0, 0.2);
+
+        transition:
+          right 0.4s ease;
+
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        right: 0;
+      }
+
+      .nav-link {
+        padding:
+          14px 13px;
+
+        color:
+          rgba(255, 255, 255, 0.72);
+
+        border-radius: 8px;
+      }
+
+      .nav-link::after {
+        display: none;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--white);
+
+        background:
+          rgba(255, 255, 255, 0.06);
+      }
+
+      .nav-cta {
+        margin:
+          12px 0 0;
+
+        justify-content: center;
+      }
+
+      .menu-close {
+        position: absolute;
+
+        top: 24px;
+        right: 24px;
+
+        width: 42px;
+        height: 42px;
+
+        display: grid;
+
+        place-items: center;
+
+        color: var(--white);
+
+        background:
+          rgba(255, 255, 255, 0.08);
+
+        border-radius: 10px;
+      }
+
+      .terms-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-sidebar {
+        position: static;
+      }
+
+      .terms-nav {
+        display: grid;
+
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .terms-cta {
+        align-items: flex-start;
+
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-contact-column {
+        grid-column: auto;
+      }
+
+    }
+
+
+    /* =========================================================
+           RESPONSIVE - 600
+        ========================================================== */
+
+    @media (max-width: 600px) {
+
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .nav {
+        width:
+          calc(100% - 40px);
+
+        min-height: 72px;
+      }
+
+      .logo-text {
+        font-size: 16px;
+      }
+
+      .logo-icon {
+        width: 39px;
+        height: 39px;
+      }
+
+      .terms-hero {
+        min-height: 530px;
+
+        padding:
+          125px 0 65px;
+      }
+
+      .hero-title {
+        font-size:
+          clamp(38px, 12vw, 54px);
+
+        letter-spacing: -1px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 35px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .terms-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .terms-sidebar {
+        padding: 20px;
+      }
+
+      .terms-section h2 {
+        font-size: 27px;
+      }
+
+      .terms-section h2 .number {
+        width: 34px;
+        height: 34px;
+
+        font-size: 12px;
+      }
+
+      .terms-section p,
+      .terms-section li {
+        font-size: 14px;
+      }
+
+      .terms-intro {
+        padding: 22px;
+      }
+
+      .terms-notice {
+        padding: 18px;
+      }
+
+      .terms-cta {
+        padding: 40px 25px;
+
+        margin-top: 50px;
+      }
+
+      .image-break {
+        min-height: 570px;
+      }
+
+      .image-break-content h2 {
+        font-size: 42px;
+      }
+
+      .image-break-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .custom-primary-btn,
+      .custom-secondary-btn {
+        justify-content: center;
+      }
+
+      .footer {
+        padding-top: 65px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 40px;
+      }
+
+      .footer-contact-column {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+      }
+
+      .footer-legal {
+        flex-wrap: wrap;
+      }
+
+      .back-to-top {
+        right: 18px;
+        bottom: 18px;
+      }
+
+    }
+
+
+    /* =========================================================
+           RESPONSIVE - 380
+        ========================================================== */
+
+    @media (max-width: 380px) {
+
+      .container {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      .nav {
+        width:
+          calc(100% - 34px);
+      }
+
+      .hero-title {
+        font-size: 37px;
+      }
+
+      .terms-section h2 {
+        gap: 10px;
+
+        font-size: 24px;
+      }
+
+      .terms-section h2 .number {
+        width: 31px;
+        height: 31px;
+      }
+
+    }
+
+
+    /* =========================================================
+           REDUCED MOTION
+        ========================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
+
+  <a href="#main-content" class="skip-link">
+    Skip to content
+  </a>
+
+
+  <!-- =========================================================
+         PRELOADER
+    ========================================================== -->
+
+  <div class="preloader" id="preloader">
+
+    <div class="loader">
+
+      <div class="loader-icon"></div>
+
+      <p>
+        Wanderly Travels
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+  <header class="header" id="header">
+
+    <nav class="nav">
+
+
+      <!-- LOGO -->
+
+      <a href="index.html" class="logo" aria-label="Wanderly Travels Home">
+
+        <span class="logo-icon">
+          <i class="fa-solid fa-location-arrow"></i>
+        </span>
+
+        <span class="logo-text">
+          Wanderly<span>Travels</span>
+        </span>
+
+      </a>
+
+
+      <!-- MOBILE MENU BUTTON -->
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="navMenu">
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-menu" id="navMenu">
+
+        <button class="menu-close" id="menuClose" type="button" aria-label="Close navigation menu">
+
+          <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+
+        <a href="packages.html" class="nav-link">
+          Packages
+        </a>
+
+
+        <a href="destinations.html" class="nav-link">
+          Destinations
+        </a>
+
+
+        <a href="offers.html" class="nav-link">
+          Offers
+        </a>
+
+
+        <a href="our-story.html" class="nav-link">
+          Our Story
+        </a>
+
+
+        <a href="contact.html" class="nav-link">
+          Contact
+        </a>
+
+
+        <a href="custom-trip.html" class="nav-cta">
+          Plan My Trip
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <!-- MOBILE OVERLAY -->
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+
+  <!-- =========================================================
+         MAIN
+    ========================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+    <section class="terms-hero">
+
+      <div class="container">
+
+        <div class="hero-content reveal">
+
+
+          <div class="hero-eyebrow">
+
+            <i class="fa-solid fa-file-contract"></i>
+
+            TERMS & CONDITIONS
+
+          </div>
+
+
+          <h1 class="hero-title">
+
+            Clear terms.
+            <span>Confident journeys.</span>
+
+          </h1>
+
+
+          <p class="hero-description">
+
+            Please read these terms carefully before
+            enquiring about, booking or using services
+            provided by Wanderly Travels.
+
+          </p>
+
+
+          <div class="breadcrumb">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+              Terms & Conditions
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+             TERMS SECTION
+        ====================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+
+        <!-- SECTION HEADING -->
+
+        <div class="section-heading reveal">
+
+          <span class="section-eyebrow">
+
+            <i class="fa-solid fa-scale-balanced"></i>
+
+            TERMS OF SERVICE
+
+          </span>
+
+
+          <h2 class="section-title">
+
+            Before you
+            <span>start your journey.</span>
+
+          </h2>
+
+
+          <p class="section-description">
+
+            These Terms & Conditions outline the general
+            terms that apply when you use the Wanderly
+            Travels website, submit an enquiry or book
+            travel services through us.
+
+          </p>
+
+
+          <div class="last-updated">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            Last updated: October 2026
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+                     TERMS LAYOUT
+                ================================================== -->
+
+        <div class="terms-layout">
+
+
+          <!-- =================================================
+                         SIDEBAR
+                    ================================================== -->
+
+          <aside class="terms-sidebar reveal">
+
+            <div class="terms-sidebar-title">
+              On this page
+            </div>
+
+
+            <nav class="terms-nav">
+
+
+              <a href="#agreement">
+                Agreement
+              </a>
+
+
+              <a href="#services">
+                Our Services
+              </a>
+
+
+              <a href="#enquiries">
+                Enquiries & Quotes
+              </a>
+
+
+              <a href="#booking">
+                Booking Confirmation
+              </a>
+
+
+              <a href="#payment">
+                Payments
+              </a>
+
+
+              <a href="#pricing">
+                Pricing
+              </a>
+
+
+              <a href="#changes">
+                Changes & Cancellations
+              </a>
+
+
+              <a href="#travel-documents">
+                Travel Documents
+              </a>
+
+
+              <a href="#suppliers">
+                Third-Party Suppliers
+              </a>
+
+
+              <a href="#responsibility">
+                Travel Responsibility
+              </a>
+
+
+              <a href="#website">
+                Website Use
+              </a>
+
+
+              <a href="#contact-terms">
+                Contact Us
+              </a>
+
+            </nav>
+
+          </aside>
+
+
+          <!-- =================================================
+                         CONTENT
+                    ================================================== -->
+
+          <div class="terms-content">
+
+
+            <!-- INTRO -->
+
+            <div class="terms-intro reveal">
+
+              <strong>
+                Please read before booking
+              </strong>
+
+              <p>
+                By using our website or proceeding with
+                a booking through Wanderly Travels,
+                you acknowledge that you have read and
+                understood these general terms.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                             01
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="agreement">
+
+              <h2>
+
+                <span class="number">
+                  01
+                </span>
+
+                Agreement to These Terms
+
+              </h2>
+
+
+              <p>
+
+                These Terms & Conditions apply to your
+                use of the Wanderly Travels website
+                and to travel enquiries or bookings
+                made through our services.
+
+              </p>
+
+
+              <p>
+
+                When you submit an enquiry, accept a
+                quotation or proceed with a booking,
+                you agree to comply with these terms
+                together with any specific terms
+                communicated for your selected package.
+
+              </p>
+
+
+              <div class="terms-notice">
+
+                <div class="terms-notice-icon">
+
+                  <i class="fa-solid fa-circle-info"></i>
+
+                </div>
+
+                <div class="terms-notice-content">
+
+                  <strong>
+                    Important
+                  </strong>
+
+                  <p>
+                    Individual packages may have
+                    additional supplier or booking
+                    conditions. Those conditions
+                    will apply where specifically
+                    communicated.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                             02
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="services">
+
+              <h2>
+
+                <span class="number">
+                  02
+                </span>
+
+                Our Travel Services
+
+              </h2>
+
+
+              <p>
+
+                Wanderly Travels provides travel
+                planning and enquiry services designed
+                to help customers discover destinations,
+                packages and customized travel options.
+
+              </p>
+
+
+              <ul>
+
+                <li>
+                  Domestic and international travel
+                  packages.
+                </li>
+
+                <li>
+                  Honeymoon, family and leisure
+                  journeys.
+                </li>
+
+                <li>
+                  Customized trip planning.
+                </li>
+
+                <li>
+                  Destination and itinerary guidance.
+                </li>
+
+                <li>
+                  Assistance with selected travel
+                  arrangements where available.
+                </li>
+
+              </ul>
+
+
+              <p>
+
+                The exact services included in your
+                trip depend on the package, quotation
+                and suppliers involved.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             03
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="enquiries">
+
+              <h2>
+
+                <span class="number">
+                  03
+                </span>
+
+                Enquiries & Quotations
+
+              </h2>
+
+
+              <p>
+
+                Submitting an enquiry through our
+                website does not automatically create
+                a confirmed booking.
+
+              </p>
+
+
+              <p>
+
+                After receiving your requirements,
+                we may contact you to clarify dates,
+                destination preferences, number of
+                travellers, budget and other details
+                before preparing a quotation.
+
+              </p>
+
+
+              <p>
+
+                Quotations may have a validity period
+                and prices or availability may change
+                before confirmation.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             04
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="booking">
+
+              <h2>
+
+                <span class="number">
+                  04
+                </span>
+
+                Booking Confirmation
+
+              </h2>
+
+
+              <p>
+
+                A booking is considered confirmed only
+                after the required confirmation steps
+                have been completed and the applicable
+                payment has been received or otherwise
+                acknowledged by Wanderly Travels.
+
+              </p>
+
+
+              <p>
+
+                Confirmation details may include
+                itinerary information, accommodation,
+                transportation, activities and other
+                services included in your selected trip.
+
+              </p>
+
+
+              <p>
+
+                Please carefully check all details in
+                your confirmation and notify us as soon
+                as possible if anything appears
+                incorrect.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             05
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="payment">
+
+              <h2>
+
+                <span class="number">
+                  05
+                </span>
+
+                Payments
+
+              </h2>
+
+
+              <p>
+
+                Payment requirements vary depending on
+                the selected package, travel dates and
+                suppliers involved.
+
+              </p>
+
+
+              <ul>
+
+                <li>
+                  A deposit or advance payment may be
+                  required to confirm a booking.
+                </li>
+
+                <li>
+                  The remaining balance may have to be
+                  paid before the specified due date.
+                </li>
+
+                <li>
+                  Certain services may require full
+                  payment at the time of confirmation.
+                </li>
+
+                <li>
+                  Failure to make required payments
+                  on time may result in cancellation
+                  or loss of availability.
+                </li>
+
+              </ul>
+
+
+              <p>
+
+                Specific payment instructions provided
+                with your quotation or booking should
+                be followed.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             06
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="pricing">
+
+              <h2>
+
+                <span class="number">
+                  06
+                </span>
+
+                Pricing & Availability
+
+              </h2>
+
+
+              <p>
+
+                Travel prices can change because of
+                availability, seasonal demand, exchange
+                rates, supplier pricing, taxes,
+                transportation costs and other factors.
+
+              </p>
+
+
+              <p>
+
+                Prices displayed on the website may be
+                indicative and should not be considered
+                a final booking price until confirmed
+                by Wanderly Travels.
+
+              </p>
+
+
+              <p>
+
+                Any inclusions, exclusions, taxes,
+                fees or additional charges will depend
+                on the specific quotation or booking.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             07
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="changes">
+
+              <h2>
+
+                <span class="number">
+                  07
+                </span>
+
+                Changes & Cancellations
+
+              </h2>
+
+
+              <p>
+
+                Cancellation and modification conditions
+                depend on the travel package and the
+                policies of the suppliers involved.
+
+              </p>
+
+
+              <ul>
+
+                <li>
+                  Cancellation charges may apply.
+                </li>
+
+                <li>
+                  Some bookings may be non-refundable.
+                </li>
+
+                <li>
+                  Changes may be subject to
+                  availability and additional charges.
+                </li>
+
+                <li>
+                  Refund processing times may depend
+                  on the relevant supplier or payment
+                  provider.
+                </li>
+
+              </ul>
+
+
+              <p>
+
+                The cancellation terms specifically
+                communicated for your booking will take
+                priority where applicable.
+
+              </p>
+
+
+              <div class="terms-notice">
+
+                <div class="terms-notice-icon">
+
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+                <div class="terms-notice-content">
+
+                  <strong>
+                    Before cancelling
+                  </strong>
+
+                  <p>
+                    Please contact us first so we
+                    can explain the applicable
+                    cancellation charges and
+                    available options.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <!-- =================================================
+                             08
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="travel-documents">
+
+              <h2>
+
+                <span class="number">
+                  08
+                </span>
+
+                Travel Documents
+
+              </h2>
+
+
+              <p>
+
+                Travellers are responsible for ensuring
+                that they have valid travel documents
+                required for their journey.
+
+              </p>
+
+
+              <ul>
+
+                <li>
+                  Valid passports where required.
+                </li>
+
+                <li>
+                  Appropriate visas and permits.
+                </li>
+
+                <li>
+                  Required identification documents.
+                </li>
+
+                <li>
+                  Any health or entry documentation
+                  required by the destination.
+                </li>
+
+              </ul>
+
+
+              <p>
+
+                Requirements can change. Travellers
+                should verify current requirements with
+                the relevant official authorities before
+                travelling.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             09
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="suppliers">
+
+              <h2>
+
+                <span class="number">
+                  09
+                </span>
+
+                Third-Party Suppliers
+
+              </h2>
+
+
+              <p>
+
+                Travel services may involve independent
+                third-party suppliers such as airlines,
+                hotels, transport operators, activity
+                providers and local service partners.
+
+              </p>
+
+
+              <p>
+
+                Their own terms, cancellation policies,
+                operating conditions and limitations may
+                apply to the services they provide.
+
+              </p>
+
+
+              <p>
+
+                Where appropriate, Wanderly Travels
+                will communicate relevant supplier
+                conditions as part of the booking
+                process.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             10
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="responsibility">
+
+              <h2>
+
+                <span class="number">
+                  10
+                </span>
+
+                Traveller Responsibility
+
+              </h2>
+
+
+              <p>
+
+                Travellers are expected to provide
+                accurate information and follow the
+                requirements communicated for their
+                journey.
+
+              </p>
+
+
+              <ul>
+
+                <li>
+                  Provide correct passenger details.
+                </li>
+
+                <li>
+                  Review booking and itinerary
+                  information carefully.
+                </li>
+
+                <li>
+                  Arrive at airports, stations and
+                  meeting points on time.
+                </li>
+
+                <li>
+                  Follow applicable local laws and
+                  supplier instructions.
+                </li>
+
+                <li>
+                  Take reasonable care of personal
+                  belongings and travel documents.
+                </li>
+
+              </ul>
+
+            </article>
+
+
+            <!-- =================================================
+                             11
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="website">
+
+              <h2>
+
+                <span class="number">
+                  11
+                </span>
+
+                Website Use
+
+              </h2>
+
+
+              <p>
+
+                You agree to use the Wanderly Travels
+                website only for lawful purposes and
+                in a way that does not interfere with
+                the operation or security of the website.
+
+              </p>
+
+
+              <p>
+
+                Website content, including text,
+                graphics, branding and design elements,
+                is provided for informational and
+                business purposes and should not be
+                reproduced or misused without
+                appropriate permission.
+
+              </p>
+
+
+              <p>
+
+                We may update, modify or remove website
+                content, packages or offers without
+                prior notice.
+
+              </p>
+
+            </article>
+
+
+            <!-- =================================================
+                             12
+                        ================================================== -->
+
+            <article class="terms-section reveal" id="contact-terms">
+
+              <h2>
+
+                <span class="number">
+                  12
+                </span>
+
+                Contact Wanderly Travels
+
+              </h2>
+
+
+              <p>
+
+                If you have questions about these Terms
+                & Conditions, your quotation or an
+                existing booking, please contact our
+                team.
+
+              </p>
+
+
+              <ul>
+
+                <li>
+
+                  Email:
+
+                  <a href="mailto:hello@wanderlytravels.com">
+                    hello@wanderlytravels.com
+                  </a>
+
+                </li>
+
+
+                <li>
+
+                  Phone:
+
+                  <a href="tel:+919876543210">
+                    +91 98765 43210
+                  </a>
+
+                </li>
+
+
+                <li>
+                  Location: India
+                </li>
+
+              </ul>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+                     CTA
+                ================================================== -->
+
+        <div class="terms-cta reveal">
+
+          <div class="terms-cta-content">
+
+            <h2>
+              Ready to plan your journey?
+            </h2>
+
+            <p>
+              Have questions about a package, booking
+              or customized itinerary? Talk to the
+              Wanderly Travels team.
+            </p>
+
+          </div>
+
+
+          <a href="contact.html" class="btn btn-primary">
+
+            Contact Us
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+             IMAGE BREAK
+        ====================================================== -->
+
+    <section class="image-break">
+
+      <div class="container">
+
+        <div class="image-break-content reveal">
+
+          <span class="section-eyebrow">
+
+            <i class="fa-solid fa-globe"></i>
+
+            THE WORLD IS WAITING
+
+          </span>
+
+
+          <h2>
+
+            Your next story
+            <span>starts here.</span>
+
+          </h2>
+
+
+          <p>
+
+            You bring the dream. We'll help you find the
+            destination, experiences and little details
+            that turn it into a journey worth remembering.
+
+          </p>
+
+
+          <div class="image-break-actions">
+
+
+            <a href="destinations.html" class="custom-primary-btn">
+
+              Explore Destinations
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="contact.html" class="custom-secondary-btn">
+
+              Talk to Us
+
+              <i class="fa-solid fa-paper-plane"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+
+          <a href="index.html" class="logo" aria-label="Wanderly Travels Home">
+
+            <span class="logo-icon">
+
+              <i class="fa-solid fa-location-arrow"></i>
+
+            </span>
+
+
+            <span class="logo-text">
+
+              Wanderly<span>Travels</span>
+
+            </span>
+
+          </a>
+
+
+          <p class="footer-description">
+
+            Thoughtfully planned journeys for people who
+            want to see more, feel more and travel with
+            confidence.
+
+          </p>
+
+
+          <div class="social-links">
+
+
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Explore
+          </h3>
+
+
+          <ul class="footer-links">
+
+
+            <li>
+              <a href="packages.html">
+                Packages
+              </a>
+            </li>
+
+
+            <li>
+              <a href="destinations.html">
+                Destinations
+              </a>
+            </li>
+
+
+            <li>
+              <a href="offers.html">
+                Offers
+              </a>
+            </li>
+
+
+            <li>
+              <a href="custom-trip.html">
+                Custom Trip
+              </a>
+            </li>
+
+
+            <li>
+              <a href="faq.html">
+                FAQ
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div>
+
+          <h3 class="footer-title">
+            Company
+          </h3>
+
+
+          <ul class="footer-links">
+
+
+            <li>
+              <a href="our-story.html">
+                Our Story
+              </a>
+            </li>
+
+
+            <li>
+              <a href="contact.html">
+                Contact
+              </a>
+            </li>
+
+
+            <li>
+              <a href="custom-trip.html">
+                Plan My Trip
+              </a>
+            </li>
+
+
+            <li>
+              <a href="privacy.html">
+                Privacy Policy
+              </a>
+            </li>
+
+
+            <li>
+              <a href="terms.html" class="active" aria-current="page">
+                Terms & Conditions
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-contact-column">
+
+          <h3 class="footer-title">
+            Get In Touch
+          </h3>
+
+
+          <div class="footer-contact">
+
+
+            <div class="footer-contact-item">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <span>
+                India
+              </span>
+
+            </div>
+
+
+            <div class="footer-contact-item">
+
+              <i class="fa-solid fa-phone"></i>
+
+              <a href="tel:+919876543210">
+                +91 98765 43210
+              </a>
+
+            </div>
+
+
+            <div class="footer-contact-item">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <a href="mailto:hello@wanderlytravels.com">
+                hello@wanderlytravels.com
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+
+        <p>
+
+          ©
+
+          <span id="currentYear"></span>
+
+          Wanderly Travels.
+          All rights reserved.
+
+        </p>
+
+
+        <div class="footer-legal">
+
+
+          <a href="privacy.html">
+            Privacy
+          </a>
+
+
+          <a href="terms.html" class="active" aria-current="page">
+            Terms
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+
+  <!-- =========================================================
+         COMBINED JAVASCRIPT
+    ========================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+
+        /* =================================================
+           ELEMENTS
+        ================================================= */
+
+        const preloader =
+          document.getElementById(
+            "preloader"
+          );
+
+
+        const header =
+          document.getElementById(
+            "header"
+          );
+
+
+        const menuToggle =
+          document.getElementById(
+            "menuToggle"
+          );
+
+
+        const menuClose =
+          document.getElementById(
+            "menuClose"
+          );
+
+
+        const navMenu =
+          document.getElementById(
+            "navMenu"
+          );
+
+
+        const menuOverlay =
+          document.getElementById(
+            "menuOverlay"
+          );
+
+
+        const backToTop =
+          document.getElementById(
+            "backToTop"
+          );
+
+
+        const currentYear =
+          document.getElementById(
+            "currentYear"
+          );
+
+
+        const revealElements =
+          document.querySelectorAll(
+            ".reveal"
+          );
+
+
+        const termsLinks =
+          document.querySelectorAll(
+            ".terms-nav a"
+          );
+
+
+        const termsSections =
+          document.querySelectorAll(
+            ".terms-section"
+          );
+
+
+        /* =================================================
+           REDUCED MOTION
+        ================================================= */
+
+        const prefersReducedMotion =
+          window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+          ).matches;
+
+
+        /* =================================================
+           PRELOADER
+        ================================================= */
+
+        let loaderHidden = false;
+
+
+        const hidePreloader = () => {
+
+          if (loaderHidden) {
+            return;
+          }
+
+          loaderHidden = true;
+
+          if (preloader) {
+
+            preloader.classList.add(
+              "hide"
+            );
+
+          }
+
+        };
+
+
+        window.addEventListener(
+          "load",
+          hidePreloader
+        );
+
+
+        setTimeout(
+          hidePreloader,
+          1800
+        );
+
+
+        /* =================================================
+           CURRENT YEAR
+        ================================================= */
+
+        if (currentYear) {
+
+          currentYear.textContent =
+            new Date().getFullYear();
+
+        }
+
+
+        /* =================================================
+           MOBILE MENU
+        ================================================= */
+
+        const openMenu = () => {
+
+          navMenu?.classList.add(
+            "active"
+          );
+
+
+          menuOverlay?.classList.add(
+            "active"
+          );
+
+
+          document.body.classList.add(
+            "menu-open"
+          );
+
+
+          menuToggle?.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+
+        };
+
+
+        const closeMenu = () => {
+
+          navMenu?.classList.remove(
+            "active"
+          );
+
+
+          menuOverlay?.classList.remove(
+            "active"
+          );
+
+
+          document.body.classList.remove(
+            "menu-open"
+          );
+
+
+          menuToggle?.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        };
+
+
+        menuToggle?.addEventListener(
+          "click",
+          openMenu
+        );
+
+
+        menuClose?.addEventListener(
+          "click",
+          closeMenu
+        );
+
+
+        menuOverlay?.addEventListener(
+          "click",
+          closeMenu
+        );
+
+
+        document.addEventListener(
+          "keydown",
+          event => {
+
+            if (
+              event.key === "Escape"
+            ) {
+
+              closeMenu();
+
+            }
+
+          }
+        );
+
+
+        document.querySelectorAll(
+          ".nav-menu a"
+        ).forEach(link => {
+
+          link.addEventListener(
+            "click",
+            closeMenu
+          );
+
+        });
+
+
+        window.addEventListener(
+          "resize",
+          () => {
+
+            if (
+              window.innerWidth > 900
+            ) {
+
+              closeMenu();
+
+            }
+
+          }
+        );
+
+
+        /* =================================================
+           HEADER SCROLL
+        ================================================= */
+
+        const handleHeader = () => {
+
+          if (!header) {
+            return;
+          }
+
+
+          if (
+            window.scrollY > 40
+          ) {
+
+            header.classList.add(
+              "scrolled"
+            );
+
+          } else {
+
+            header.classList.remove(
+              "scrolled"
+            );
+
+          }
+
+        };
+
+
+        window.addEventListener(
+          "scroll",
+          handleHeader,
+          {
+            passive: true
+          }
+        );
+
+
+        handleHeader();
+
+
+        /* =================================================
+           REVEAL ANIMATION
+        ================================================= */
+
+        if (
+          prefersReducedMotion ||
+          !(
+            "IntersectionObserver"
+            in window
+          )
+        ) {
+
+          revealElements.forEach(
+            element => {
+
+              element.classList.add(
+                "visible"
+              );
+
+            }
+          );
+
+        } else {
+
+
+          const revealObserver =
+            new IntersectionObserver(
+              entries => {
+
+                entries.forEach(
+                  entry => {
+
+                    if (
+                      entry.isIntersecting
+                    ) {
+
+                      entry.target.classList.add(
+                        "visible"
+                      );
+
+
+                      revealObserver.unobserve(
+                        entry.target
+                      );
+
+                    }
+
+                  }
+                );
+
+              },
+              {
+                threshold: 0.12,
+
+                rootMargin:
+                  "0px 0px -50px 0px"
+              }
+            );
+
+
+          revealElements.forEach(
+            element => {
+
+              revealObserver.observe(
+                element
+              );
+
+            }
+          );
+
+        }
+
+
+        /* =================================================
+           TERMS SIDEBAR SMOOTH SCROLL
+        ================================================= */
+
+        termsLinks.forEach(
+          link => {
+
+            link.addEventListener(
+              "click",
+              event => {
+
+                const targetId =
+                  link.getAttribute(
+                    "href"
+                  );
+
+
+                if (
+                  !targetId ||
+                  !targetId.startsWith(
+                    "#"
+                  )
+                ) {
+
+                  return;
+
+                }
+
+
+                const target =
+                  document.querySelector(
+                    targetId
+                  );
+
+
+                if (!target) {
+                  return;
+                }
+
+
+                event.preventDefault();
+
+
+                const headerOffset =
+                  105;
+
+
+                const targetPosition =
+                  target.getBoundingClientRect()
+                    .top +
+                  window.scrollY -
+                  headerOffset;
+
+
+                window.scrollTo({
+
+                  top:
+                    targetPosition,
+
+                  behavior:
+                    prefersReducedMotion
+                      ? "auto"
+                      : "smooth"
+
+                });
+
+              }
+            );
+
+          }
+        );
+
+
+        /* =================================================
+           ACTIVE TERMS SECTION
+        ================================================= */
+
+        if (
+          "IntersectionObserver"
+          in window
+        ) {
+
+
+          const sectionObserver =
+            new IntersectionObserver(
+              entries => {
+
+                entries.forEach(
+                  entry => {
+
+                    if (
+                      entry.isIntersecting
+                    ) {
+
+                      const id =
+                        entry.target.id;
+
+
+                      termsLinks.forEach(
+                        link => {
+
+                          const matches =
+                            link.getAttribute(
+                              "href"
+                            ) ===
+                            `#${id}`;
+
+
+                          link.classList.toggle(
+                            "active",
+                            matches
+                          );
+
+                        }
+                      );
+
+                    }
+
+                  }
+                );
+
+              },
+              {
+                rootMargin:
+                  "-120px 0px -55% 0px",
+
+                threshold: 0
+              }
+            );
+
+
+          termsSections.forEach(
+            section => {
+
+              sectionObserver.observe(
+                section
+              );
+
+            }
+          );
+
+        }
+
+
+        /* =================================================
+           BACK TO TOP
+        ================================================= */
+
+        const handleBackToTop = () => {
+
+          if (!backToTop) {
+            return;
+          }
+
+
+          if (
+            window.scrollY > 600
+          ) {
+
+            backToTop.classList.add(
+              "show"
+            );
+
+          } else {
+
+            backToTop.classList.remove(
+              "show"
+            );
+
+          }
+
+        };
+
+
+        window.addEventListener(
+          "scroll",
+          handleBackToTop,
+          {
+            passive: true
+          }
+        );
+
+
+        handleBackToTop();
+
+
+        backToTop?.addEventListener(
+          "click",
+          () => {
+
+            window.scrollTo({
+
+              top: 0,
+
+              behavior:
+                prefersReducedMotion
+                  ? "auto"
+                  : "smooth"
+
+            });
+
+          }
+        );
+
+
+        /* =================================================
+           INTERNAL SMOOTH LINKS
+        ================================================= */
+
+        document.querySelectorAll(
+          'a[href^="#"]'
+        ).forEach(
+          link => {
+
+            link.addEventListener(
+              "click",
+              event => {
+
+                const targetId =
+                  link.getAttribute(
+                    "href"
+                  );
+
+
+                if (
+                  !targetId ||
+                  targetId === "#"
+                ) {
+
+                  return;
+
+                }
+
+
+                const target =
+                  document.querySelector(
+                    targetId
+                  );
+
+
+                if (!target) {
+                  return;
+                }
+
+
+                /*
+                 * Sidebar links already have
+                 * their own handler above.
+                 */
+
+                if (
+                  link.closest(
+                    ".terms-nav"
+                  )
+                ) {
+
+                  return;
+
+                }
+
+
+                event.preventDefault();
+
+
+                const headerOffset =
+                  100;
+
+
+                const position =
+                  target.getBoundingClientRect()
+                    .top +
+                  window.scrollY -
+                  headerOffset;
+
+
+                window.scrollTo({
+
+                  top:
+                    position,
+
+                  behavior:
+                    prefersReducedMotion
+                      ? "auto"
+                      : "smooth"
+
+                });
+
+              }
+            );
+
+          }
+        );
+
+
+        /* =================================================
+           IMAGE FALLBACK
+        ================================================= */
+
+        document.querySelectorAll(
+          "img"
+        ).forEach(
+          img => {
+
+            img.addEventListener(
+              "error",
+              () => {
+
+                img.style.display =
+                  "none";
+
+              },
+              {
+                once: true
+              }
+            );
+
+          }
+        );
+
+
+        /* =================================================
+           HERO PARALLAX
+        ================================================= */
+
+        if (
+          !prefersReducedMotion
+        ) {
+
+          const hero =
+            document.querySelector(
+              ".terms-hero"
+            );
+
+
+          window.addEventListener(
+            "scroll",
+            () => {
+
+              if (!hero) {
+                return;
+              }
+
+
+              const scrollY =
+                window.scrollY;
+
+
+              if (
+                scrollY < 700
+              ) {
+
+                hero.style
+                  .backgroundPosition =
+                  `center ${scrollY * 0.18}px`;
+
+              }
+
+            },
+            {
+              passive: true
+            }
+          );
+
+        }
+
+
+        /* =================================================
+           KEYBOARD NAVIGATION
+        ================================================= */
+
+        termsLinks.forEach(
+          link => {
+
+            link.addEventListener(
+              "keydown",
+              event => {
+
+                const links =
+                  [...termsLinks];
+
+
+                const currentIndex =
+                  links.indexOf(
+                    link
+                  );
+
+
+                let nextIndex =
+                  currentIndex;
+
+
+                if (
+                  event.key ===
+                  "ArrowDown"
+                ) {
+
+                  nextIndex =
+                    Math.min(
+                      currentIndex + 1,
+                      links.length - 1
+                    );
+
+                }
+
+
+                if (
+                  event.key ===
+                  "ArrowUp"
+                ) {
+
+                  nextIndex =
+                    Math.max(
+                      currentIndex - 1,
+                      0
+                    );
+
+                }
+
+
+                if (
+                  event.key ===
+                  "Home"
+                ) {
+
+                  nextIndex = 0;
+
+                }
+
+
+                if (
+                  event.key ===
+                  "End"
+                ) {
+
+                  nextIndex =
+                    links.length - 1;
+
+                }
+
+
+                if (
+                  nextIndex !==
+                  currentIndex
+                ) {
+
+                  event.preventDefault();
+
+                  links[
+                    nextIndex
+                  ].focus();
+
+                }
+
+              }
+            );
+
+          }
+        );
+
+
+        /* =================================================
+           CONSOLE
+        ================================================= */
+
+        console.log(
+          "%cWanderly Travels Terms Page Loaded",
+          "color:#18aa9d;font-weight:700;"
+        );
+
+      }
+
+    );
+
+  </script>
+
+</body>
+
+</html>

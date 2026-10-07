@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Custom Trip | Wanderly Travels</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom-trip.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       PRELOADER
+  ====================================================== -->
+  <div class="preloader" id="preloader">
+    <div class="loader-content">
+      <div class="loader-plane">
+        <i class="fa-solid fa-plane"></i>
+      </div>
+      <span>Wanderly</span>
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+  <header class="header" id="header">
+
+    <div class="container nav">
+
+      <!-- LOGO -->
+      <a href="index.html" class="logo">
+
+        <span class="logo-icon">
+          <i class="fa-solid fa-compass"></i>
+        </span>
+
+        <span class="logo-text">
+          <strong>Wanderly</strong>
+          <small>TRAVEL &amp; EXPERIENCES</small>
+        </span>
+
+      </a>
+
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="nav-menu" id="navMenu">
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="destinations.html" class="nav-link">
+          Destinations
+        </a>
+
+        <a href="travel-packages.html" class="nav-link">
+          Travel Packages
+        </a>
+
+        <a href="custom-trip.html" class="nav-link active">
+          Custom Trip
+        </a>
+
+        <a href="our-story.html" class="nav-link">
+          Our Story
+        </a>
+
+        <a href="contact.html" class="nav-link">
+          Contact
+        </a>
+
+        <a href="custom-trip.html#trip-planner" class="nav-cta">
+          Start Planning
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </nav>
+
+
+      <!-- MOBILE MENU -->
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+  <main>
+
+    <section class="custom-hero">
+
+      <div class="custom-hero-bg">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90"
+          alt="Beautiful mountain travel destination">
+      </div>
+
+      <div class="custom-hero-overlay"></div>
+
+
+      <div class="container custom-hero-container">
+
+        <div class="custom-hero-content reveal">
+
+          <span class="custom-eyebrow">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            YOUR JOURNEY, YOUR WAY
+          </span>
+
+          <h1>
+            Create Your
+            <span>Perfect Trip.</span>
+          </h1>
+
+          <p>
+            Tell us what makes a journey special to you.
+            We'll transform your ideas, preferences and dreams
+            into a beautifully planned travel experience.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a href="#trip-planner" class="custom-primary-btn">
+              Start Planning
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="destinations.html" class="custom-secondary-btn">
+              Explore Destinations
+              <i class="fa-solid fa-compass"></i>
+            </a>
+
+          </div>
+
+
+          <div class="custom-breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>Custom Trip</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+    <section class="custom-intro">
+
+      <div class="container">
+
+        <div class="custom-intro-content reveal">
+
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-sparkles"></i>
+            MADE AROUND YOU
+          </span>
+
+          <h2>
+            No two journeys should feel
+            <span>the same.</span>
+          </h2>
+
+          <p class="intro-lead">
+            Your ideal holiday shouldn't have to fit inside
+            someone else's itinerary.
+          </p>
+
+          <p>
+            Whether you're dreaming about a peaceful escape,
+            an adventurous road trip, a romantic getaway or
+            an unforgettable family holiday, Wanderly helps
+            you build a trip around the way you actually want
+            to travel.
+          </p>
+
+          <p>
+            Share your ideas with us and we'll take care of
+            turning them into a thoughtful travel plan.
+          </p>
+
+        </div>
+
+
+        <!-- INTRO FEATURES -->
+        <div class="intro-features">
+
+          <article class="intro-feature reveal">
+
+            <div class="feature-icon">
+              <i class="fa-solid fa-route"></i>
+            </div>
+
+            <div>
+              <h3>Flexible Itineraries</h3>
+
+              <p>
+                Build your trip around your own schedule,
+                interests and travel rhythm.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="intro-feature reveal">
+
+            <div class="feature-icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div>
+              <h3>Travel Your Way</h3>
+
+              <p>
+                From slow escapes to adventure-packed
+                holidays, make every day yours.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="intro-feature reveal">
+
+            <div class="feature-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <div>
+              <h3>Expert Guidance</h3>
+
+              <p>
+                Get thoughtful recommendations from people
+                who understand travel.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+    ====================================================== -->
+    <section class="planning-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-location-dot"></i>
+            LET'S DESIGN IT
+          </span>
+
+          <h2>
+            Tell us about your
+            <span>dream trip.</span>
+          </h2>
+
+          <p>
+            Give us a few details and we'll know where to start.
+            The more you tell us, the better we can shape your
+            perfect adventure.
+          </p>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+          <!-- STEP 01 -->
+          <article class="step-card reveal">
+
+            <div class="step-number">01</div>
+
+            <div class="step-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+
+            <h3>Choose your destination</h3>
+
+            <p>
+              Already have somewhere in mind? Perfect.
+              If not, we'll help you discover a destination
+              that fits your style.
+            </p>
+
+          </article>
+
+
+          <!-- STEP 02 -->
+          <article class="step-card reveal">
+
+            <div class="step-number">02</div>
+
+            <div class="step-icon">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <h3>Share your plans</h3>
+
+            <p>
+              Tell us your dates, group size, budget and
+              the kind of experiences you want to enjoy.
+            </p>
+
+          </article>
+
+
+          <!-- STEP 03 -->
+          <article class="step-card reveal">
+
+            <div class="step-number">03</div>
+
+            <div class="step-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <h3>We build the experience</h3>
+
+            <p>
+              Our team turns your ideas into a personalised
+              itinerary designed around you.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="planning-note reveal">
+
+          <i class="fa-solid fa-lightbulb"></i>
+
+          <p>
+            <strong>Not sure what you want yet?</strong>
+            That's completely okay. Just tell us what kind
+            of feeling you're looking for.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TRIP PLANNER FORM
+    ====================================================== -->
+    <section class="trip-planner-section" id="trip-planner">
+
+      <div class="container">
+
+        <div class="trip-planner-grid">
+
+          <!-- FORM INTRO -->
+          <div class="planner-intro reveal">
+
+            <span class="section-eyebrow">
+              <i class="fa-solid fa-paper-plane"></i>
+              START HERE
+            </span>
+
+            <h2>
+              Plan your
+              <span>journey.</span>
+            </h2>
+
+            <p>
+              Tell us a little about your trip and we'll use
+              your answers to understand exactly what you're
+              looking for.
+            </p>
+
+
+            <div class="planner-points">
+
+              <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Personalised recommendations
+              </div>
+
+              <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Flexible travel ideas
+              </div>
+
+              <div>
+                <i class="fa-solid fa-circle-check"></i>
+                Thoughtful itinerary planning
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- FORM -->
+          <div class="trip-form-card reveal">
+
+            <form id="customTripForm" novalidate>
+
+              <!-- DESTINATION -->
+              <div class="form-group">
+
+                <label for="destination">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Where do you want to go?
+                </label>
+
+                <input type="text" id="destination" name="destination" placeholder="e.g. Kerala, Bali, Europe" required>
+
+              </div>
+
+
+              <!-- TRAVELLERS -->
+              <div class="form-group">
+
+                <label for="travellers">
+                  <i class="fa-solid fa-users"></i>
+                  Travellers
+                </label>
+
+                <select id="travellers" name="travellers" required>
+
+                  <option value="" selected disabled>
+                    Select
+                  </option>
+
+                  <option value="1">1 Traveller</option>
+                  <option value="2">2 Travellers</option>
+                  <option value="3-4">3–4 Travellers</option>
+                  <option value="5-8">5–8 Travellers</option>
+                  <option value="9+">9+ Travellers</option>
+
+                </select>
+
+              </div>
+
+
+              <!-- DATES -->
+              <div class="form-row">
+
+                <div class="form-group">
+
+                  <label for="startDate">
+                    <i class="fa-regular fa-calendar"></i>
+                    Start date
+                  </label>
+
+                  <input type="date" id="startDate" name="startDate" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                  <label for="endDate">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    End date
+                  </label>
+
+                  <input type="date" id="endDate" name="endDate" required>
+
+                </div>
+
+              </div>
+
+
+              <!-- TRIP TYPE -->
+              <fieldset class="form-group trip-type-group">
+
+                <legend>
+                  <i class="fa-solid fa-compass"></i>
+                  What kind of trip are you dreaming of?
+                </legend>
+
+
+                <div class="trip-type-grid">
+
+                  <label class="trip-option">
+
+                    <input type="radio" name="tripType" value="Adventure" required>
+
+                    <span>
+                      <i class="fa-solid fa-mountain-sun"></i>
+                      Adventure
+                    </span>
+
+                  </label>
+
+
+                  <label class="trip-option">
+
+                    <input type="radio" name="tripType" value="Relaxation">
+
+                    <span>
+                      <i class="fa-solid fa-spa"></i>
+                      Relaxation
+                    </span>
+
+                  </label>
+
+
+                  <label class="trip-option">
+
+                    <input type="radio" name="tripType" value="Romantic">
+
+                    <span>
+                      <i class="fa-solid fa-heart"></i>
+                      Romantic
+                    </span>
+
+                  </label>
+
+
+                  <label class="trip-option">
+
+                    <input type="radio" name="tripType" value="Family">
+
+                    <span>
+                      <i class="fa-solid fa-people-roof"></i>
+                      Family
+                    </span>
+
+                  </label>
+
+
+                  <label class="trip-option">
+
+                    <input type="radio" name="tripType" value="Culture">
+
+                    <span>
+                      <i class="fa-solid fa-landmark"></i>
+                      Culture
+                    </span>
+
+                  </label>
+
+
+                  <label class="trip-option">
+
+                    <input type="radio" name="tripType" value="Luxury">
+
+                    <span>
+                      <i class="fa-solid fa-gem"></i>
+                      Luxury
+                    </span>
+
+                  </label>
+
+                </div>
+
+              </fieldset>
+
+
+              <!-- BUDGET -->
+              <div class="form-group">
+
+                <label for="budget">
+                  <i class="fa-solid fa-wallet"></i>
+                  Approximate budget
+                </label>
+
+                <select id="budget" name="budget" required>
+
+                  <option value="" selected disabled>
+                    Select your budget
+                  </option>
+
+                  <option value="Under ₹25,000">
+                    Under ₹25,000
+                  </option>
+
+                  <option value="₹25,000 - ₹50,000">
+                    ₹25,000 – ₹50,000
+                  </option>
+
+                  <option value="₹50,000 - ₹1,00,000">
+                    ₹50,000 – ₹1,00,000
+                  </option>
+
+                  <option value="₹1,00,000 - ₹2,00,000">
+                    ₹1,00,000 – ₹2,00,000
+                  </option>
+
+                  <option value="₹2,00,000+">
+                    ₹2,00,000+
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- MESSAGE -->
+              <div class="form-group">
+
+                <label for="tripMessage">
+                  <i class="fa-solid fa-message"></i>
+                  Tell us more
+                </label>
+
+                <textarea id="tripMessage" name="tripMessage" rows="5"
+                  placeholder="Places you'd love to visit, experiences you want, hotel preferences, food interests..."></textarea>
+
+              </div>
+
+
+              <!-- SUBMIT -->
+              <button type="submit" class="trip-submit-btn">
+
+                Create My Trip
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+              </button>
+
+
+              <p class="form-note">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Your information is only used to help plan
+                your journey.
+
+              </p>
+
+
+              <div class="form-message" id="formMessage" aria-live="polite"></div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHY WANDERLY
+    ====================================================== -->
+    <section class="why-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-star"></i>
+            WHY WANDERLY
+          </span>
+
+          <h2>
+            Travel should feel
+            <span>effortless.</span>
+          </h2>
+
+          <p>
+            We take care of the details so you can focus on
+            the moments that make a journey unforgettable.
+          </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <article class="why-card reveal">
+
+            <span class="why-number">01</span>
+
+            <div class="why-icon">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+
+            <h3>Personalised</h3>
+
+            <p>
+              Every itinerary is shaped around your interests,
+              pace, budget and travel style.
+            </p>
+
+          </article>
+
+
+          <article class="why-card reveal">
+
+            <span class="why-number">02</span>
+
+            <div class="why-icon">
+              <i class="fa-solid fa-circle-question"></i>
+            </div>
+
+            <h3>Thoughtful</h3>
+
+            <p>
+              Discover meaningful experiences instead of simply
+              checking destinations off a list.
+            </p>
+
+          </article>
+
+
+          <article class="why-card reveal">
+
+            <span class="why-number">03</span>
+
+            <div class="why-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <h3>Supported</h3>
+
+            <p>
+              From your first idea to the final day, we're here
+              to make planning easier.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         IMAGE BREAK
+    ====================================================== -->
+    <section class="custom-image-break">
+
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2200&q=90"
+        alt="Beautiful tropical beach" loading="lazy">
+
+      <div class="image-break-overlay"></div>
+
+      <div class="container image-break-content reveal">
+
+        <span class="section-eyebrow">
+          <i class="fa-solid fa-globe"></i>
+          THE WORLD IS WAITING
+        </span>
+
+        <h2>
+          Your next story
+          <span>starts here.</span>
+        </h2>
+
+        <p>
+          You bring the dream. We'll help you find the destination,
+          experiences and little details that turn it into a journey
+          worth remembering.
+        </p>
+
+        <div class="image-break-actions">
+
+          <a href="destinations.html" class="custom-primary-btn">
+            Explore Destinations
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="contact.html" class="custom-secondary-btn">
+            Talk to Us
+            <i class="fa-solid fa-paper-plane"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+              <i class="fa-solid fa-compass"></i>
+            </span>
+
+            <span class="logo-text">
+              <strong>Wanderly</strong>
+              <small>TRAVEL &amp; EXPERIENCES</small>
+            </span>
+
+          </a>
+
+          <p>
+            Thoughtfully designed journeys for curious people
+            who want to see more, feel more and travel better.
+          </p>
+
+
+          <div class="footer-socials">
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Pinterest">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- EXPLORE -->
+        <div class="footer-column">
+
+          <h3>Explore</h3>
+
+          <a href="destinations.html">Destinations</a>
+          <a href="travel-packages.html">Travel Packages</a>
+          <a href="custom-trip.html">Custom Trips</a>
+          <a href="our-story.html">Our Story</a>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+
+          <h3>Quick Links</h3>
+
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact</a>
+          <a href="faq.html">FAQ</a>
+          <a href="privacy.html">Privacy</a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+
+          <h3>Get in Touch</h3>
+
+          <a href="mailto:hello@wanderlytravels.com">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            hello@wanderlytravels.com
+
+          </a>
+
+          <a href="tel:+919876543210">
+
+            <i class="fa-solid fa-phone"></i>
+
+            +91 98765 43210
+
+          </a>
+
+          <span>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            India
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Wanderly Travels. All rights reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+
+          <a href="privacy.html">Privacy Policy</a>
+
+          <a href="terms.html">Terms &amp; Conditions</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       BACK TO TOP
+  ====================================================== -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+  <script src="js/custom-trip.js"></script>
+
+</body>
+
+</html>

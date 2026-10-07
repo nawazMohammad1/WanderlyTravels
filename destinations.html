@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+    content="Explore beautiful destinations around India and the world with Wanderly Travels. Discover curated travel experiences, unforgettable places and custom holiday packages.">
+
+  <title>Destinations | Wanderly Travels</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Destinations CSS -->
+  <link rel="stylesheet" href="css/destinations.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+
+  <div class="preloader" id="preloader">
+
+    <div class="loader-content">
+
+      <div class="loader-plane">
+        <i class="fa-solid fa-plane"></i>
+      </div>
+
+      <span>Wanderly</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+         HEADER — SAME AS HOMEPAGE
+    ====================================================== -->
+
+  <header class="header" id="header">
+
+    <nav class="nav container">
+
+      <!-- LOGO -->
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-icon">
+          <i class="fa-solid fa-compass"></i>
+        </span>
+
+        <span class="logo-text">
+          <strong>Wanderly</strong>
+          <small>TRAVELS</small>
+        </span>
+
+      </a>
+
+
+      <!-- NAVIGATION -->
+
+      <div class="nav-menu" id="navMenu">
+
+        <a href="index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="destinations.html" class="nav-link active">
+          Destinations
+        </a>
+
+        <a href="packages.html" class="nav-link">
+          Packages
+        </a>
+
+        <a href="about.html" class="nav-link">
+          About
+        </a>
+
+        <a href="contact.html" class="nav-link">
+          Contact
+        </a>
+
+        <a href="custom-trip.html" class="nav-cta">
+          Plan My Trip
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+
+      <!-- MOBILE MENU -->
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+         DESTINATIONS HERO
+    ====================================================== -->
+
+  <main>
+
+    <section class="destinations-hero">
+
+      <div class="destinations-hero-bg">
+
+        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=2000&q=85"
+          alt="Beautiful travel destination">
+
+      </div>
+
+      <div class="destinations-hero-overlay"></div>
+
+
+      <div class="container destinations-hero-container">
+
+        <div class="destinations-hero-content reveal">
+
+          <span class="hero-eyebrow">
+            <i class="fa-solid fa-location-dot"></i>
+            EXPLORE THE WORLD
+          </span>
+
+          <h1>
+            Places that make
+            <span>memories.</span>
+          </h1>
+
+          <p>
+            From peaceful beaches and majestic mountains
+            to vibrant cities and timeless heritage,
+            discover destinations worth travelling for.
+          </p>
+
+          <div class="hero-breadcrumb">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+              Destinations
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+             DESTINATION INTRO
+        ====================================================== -->
+
+    <section class="destination-intro section">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <span class="eyebrow">
+            <i class="fa-solid fa-compass"></i>
+            FIND YOUR NEXT ESCAPE
+          </span>
+
+          <h2>
+            Explore our
+            <span>destinations</span>
+          </h2>
+
+          <p>
+            Carefully selected places for every kind
+            of traveller. Choose your vibe and let
+            Wanderly take care of the rest.
+          </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="destination-filters reveal">
+
+          <button class="filter-btn active" data-filter="all">
+            All
+          </button>
+
+          <button class="filter-btn" data-filter="beach">
+            <i class="fa-solid fa-umbrella-beach"></i>
+            Beaches
+          </button>
+
+          <button class="filter-btn" data-filter="mountain">
+            <i class="fa-solid fa-mountain"></i>
+            Mountains
+          </button>
+
+          <button class="filter-btn" data-filter="heritage">
+            <i class="fa-solid fa-landmark"></i>
+            Heritage
+          </button>
+
+          <button class="filter-btn" data-filter="city">
+            <i class="fa-solid fa-city"></i>
+            Cities
+          </button>
+
+          <button class="filter-btn" data-filter="international">
+            <i class="fa-solid fa-earth-americas"></i>
+            International
+          </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+                     DESTINATION GRID
+                ================================================== -->
+
+        <div class="destination-list">
+
+
+          <!-- CARD 01 -->
+
+          <article class="destination-item large reveal" data-category="heritage">
+
+            <div class="destination-image">
+
+              <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=85"
+                alt="Jaipur Rajasthan">
+
+              <span class="destination-badge">
+                Popular
+              </span>
+
+              <button class="destination-favorite" aria-label="Add Jaipur to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Rajasthan, India
+              </span>
+
+              <h3>
+                Jaipur
+              </h3>
+
+              <p>
+                Royal palaces, colourful bazaars,
+                ancient forts and unforgettable
+                Rajasthani culture.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  4–6 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 02 -->
+
+          <article class="destination-item reveal" data-category="beach">
+
+            <div class="destination-image">
+
+              <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=85"
+                alt="Goa beach">
+
+              <span class="destination-badge">
+                Trending
+              </span>
+
+              <button class="destination-favorite" aria-label="Add Goa to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Goa, India
+              </span>
+
+              <h3>
+                Goa
+              </h3>
+
+              <p>
+                Sun-soaked beaches, relaxed
+                evenings and vibrant coastal life.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  3–5 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 03 -->
+
+          <article class="destination-item reveal" data-category="mountain">
+
+            <div class="destination-image">
+
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp6Cq9FDcufLhW65WoeKLB5Y7AmQeVTxnPNgA_soF3jQ&s=10"
+                alt="Manali mountains">
+
+              <button class="destination-favorite" aria-label="Add Manali to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Himachal Pradesh
+              </span>
+
+              <h3>
+                Manali
+              </h3>
+
+              <p>
+                Snowy peaks, pine forests,
+                adventure and peaceful mountain
+                escapes.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  4–6 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 04 -->
+
+          <article class="destination-item reveal" data-category="heritage">
+
+            <div class="destination-image">
+
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH7Fec7RXsoDcZyFb-7Gnddo0rXgGB7TzQsQk-qTPYgw&s=10"
+                alt="Kerala heritage">
+
+              <button class="destination-favorite" aria-label="Add Kerala to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Kerala, India
+              </span>
+
+              <h3>
+                Kerala
+              </h3>
+
+              <p>
+                Backwaters, lush landscapes,
+                peaceful villages and rich culture.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  5–7 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 05 -->
+
+          <article class="destination-item large reveal" data-category="mountain">
+
+            <div class="destination-image">
+
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-_AamiFV0D7fz7gLIBsZXm0l7GQivYDsixVl08tOJg&s=10"
+                alt="Ladakh mountains">
+
+              <span class="destination-badge">
+                Adventure
+              </span>
+
+              <button class="destination-favorite" aria-label="Add Ladakh to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Ladakh, India
+              </span>
+
+              <h3>
+                Ladakh
+              </h3>
+
+              <p>
+                Dramatic landscapes, high-altitude
+                roads, monasteries and extraordinary
+                Himalayan adventures.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  6–9 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 06 -->
+
+          <article class="destination-item reveal" data-category="city">
+
+            <div class="destination-image">
+
+              <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1000&q=85"
+                alt="Mumbai city">
+
+              <button class="destination-favorite" aria-label="Add Mumbai to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Maharashtra, India
+              </span>
+
+              <h3>
+                Mumbai
+              </h3>
+
+              <p>
+                India's energetic city of dreams,
+                food, culture and coastal charm.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  2–4 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 07 -->
+
+          <article class="destination-item reveal" data-category="beach">
+
+            <div class="destination-image">
+
+              <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=1000&q=85"
+                alt="Andaman Islands">
+
+              <span class="destination-badge">
+                Hidden Gem
+              </span>
+
+              <button class="destination-favorite" aria-label="Add Andaman to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Andaman, India
+              </span>
+
+              <h3>
+                Andaman
+              </h3>
+
+              <p>
+                Turquoise waters, white-sand beaches
+                and unforgettable island experiences.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  5–7 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 08 -->
+
+          <article class="destination-item reveal" data-category="international">
+
+            <div class="destination-image">
+
+              <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=85"
+                alt="Thailand">
+
+              <span class="destination-badge">
+                International
+              </span>
+
+              <button class="destination-favorite" aria-label="Add Thailand to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Thailand
+              </span>
+
+              <h3>
+                Thailand
+              </h3>
+
+              <p>
+                Tropical islands, street food,
+                temples and colourful city life.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  5–7 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 09 -->
+
+          <article class="destination-item reveal" data-category="international">
+
+            <div class="destination-image">
+
+              <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1000&q=85"
+                alt="Dubai skyline">
+
+              <span class="destination-badge">
+                Luxury
+              </span>
+
+              <button class="destination-favorite" aria-label="Add Dubai to wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+              </button>
+
+            </div>
+
+            <div class="destination-info">
+
+              <span class="destination-type">
+                <i class="fa-solid fa-location-dot"></i>
+                Dubai, UAE
+              </span>
+
+              <h3>
+                Dubai
+              </h3>
+
+              <p>
+                Iconic architecture, luxury shopping,
+                desert adventures and world-class
+                experiences.
+              </p>
+
+              <div class="destination-bottom">
+
+                <span>
+                  <i class="fa-solid fa-clock"></i>
+                  4–6 Days
+                </span>
+
+                <a href="packages.html" class="destination-link">
+                  Explore
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <!-- LOAD MORE -->
+
+        <div class="load-more-wrapper reveal">
+
+          <button class="load-more-btn" id="loadMoreBtn">
+
+            <span>
+              Discover More
+            </span>
+
+            <i class="fa-solid fa-arrow-down"></i>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+             CUSTOM TRIP CTA
+        ====================================================== -->
+
+    <section class="destination-cta">
+
+      <div class="destination-cta-bg">
+
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85"
+          alt="Travel adventure">
+
+      </div>
+
+      <div class="destination-cta-overlay"></div>
+
+
+      <div class="container destination-cta-container">
+
+        <div class="destination-cta-content reveal">
+
+          <span class="eyebrow light">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            YOUR TRIP, YOUR WAY
+          </span>
+
+          <h2>
+            Can't find your
+            <span>perfect place?</span>
+          </h2>
+
+          <p>
+            Tell us what you love and we'll create
+            a personalised journey around your
+            interests, budget and travel style.
+          </p>
+
+          <a href="custom-trip.html" class="btn btn-primary">
+
+            Plan My Trip
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+         FOOTER — SAME AS HOMEPAGE
+    ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-main">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="logo footer-logo">
+
+            <span class="logo-icon">
+              <i class="fa-solid fa-compass"></i>
+            </span>
+
+            <span class="logo-text">
+
+              <strong>Wanderly</strong>
+
+              <small>TRAVELS</small>
+
+            </span>
+
+          </a>
+
+
+          <p>
+            We create thoughtful journeys,
+            unforgettable experiences and
+            memories that stay with you long
+            after the trip ends.
+          </p>
+
+
+          <div class="social-links">
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+          <h3>
+            Company
+          </h3>
+
+          <a href="about.html">
+            About Us
+          </a>
+
+          <a href="destinations.html">
+            Destinations
+          </a>
+
+          <a href="packages.html">
+            Travel Packages
+          </a>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+        </div>
+
+
+
+        <!-- EXPLORE -->
+
+        <div class="footer-column">
+
+          <h3>
+            Explore
+          </h3>
+
+          <a href="destinations.html">
+            Popular Places
+          </a>
+
+          <a href="packages.html">
+            Best Packages
+          </a>
+
+          <a href="custom-trip.html">
+            Custom Trips
+          </a>
+
+          <a href="reviews.html">
+            Traveller Reviews
+          </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+          <h3>
+            Get In Touch
+          </h3>
+
+          <a href="tel:+919876543210">
+            <i class="fa-solid fa-phone"></i>
+            +91 98765 43210
+          </a>
+
+          <a href="mailto:hello@wanderlytravels.com">
+            <i class="fa-solid fa-envelope"></i>
+            hello@wanderlytravels.com
+          </a>
+
+          <span>
+            <i class="fa-solid fa-location-dot"></i>
+            India
+          </span>
+
+          <a href="custom-trip.html" class="footer-plan-btn">
+
+            Plan Your Trip
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FOOTER BOTTOM -->
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span data-current-year></span>
+          Wanderly Travels. All rights reserved.
+        </span>
+
+        <div>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+         DESTINATIONS JAVASCRIPT
+    ====================================================== -->
+
+  <script src="js/destinations.js"></script>
+
+</body>
+
+</html>
